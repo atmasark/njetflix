@@ -4,8 +4,14 @@
     "es6": true,
     "node": true
   },
-  "ignorePatterns": ["node_modules", "dist"],
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist"
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -18,11 +24,16 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "rules": {
     "no-unused-vars": 0,
     "@typescript-eslint/no-unused-vars": 1,
     "no-console": 0,
-    "no-var": 2
+    "no-var": 2,
+    "import/extensions": 0,
+    "import/no-unresolved": 0
   }
 }
