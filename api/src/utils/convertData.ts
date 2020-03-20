@@ -1,11 +1,11 @@
 import convertToCamelCase from './convertToCamelCase';
 import movieData from '../../mockdata.json';
-
+import Movie from '../interfaces/movie';
 // Mock data has been fetched from a public API, so the data has to be filtered
 const keyArray = ['id', 'title', 'year', 'rated', 'genre', 'director', 'actors', 'plot', 'poster', 'imdbRating'];
 
 // Go thru an object recursively to convert keys to camelCase
-const eachRecursive = (obj: object) => {
+const eachRecursive = (obj: Movie) => {
   for (const k in obj) {
     // If value is object, go into it recursively
     if (typeof obj[k] === 'object' && obj[k] !== null) {
@@ -22,4 +22,4 @@ const eachRecursive = (obj: object) => {
   return obj;
 };
 
-export default movieData.map((obj: object, index: number) => eachRecursive({ ...obj, id: index }));
+export default movieData.map((obj: any, index: number) => eachRecursive({ ...obj, id: index }));

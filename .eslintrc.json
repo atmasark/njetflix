@@ -36,6 +36,7 @@
     "import/extensions": 0,
     "import/no-unresolved": 0,
     "guard-for-in": 0,
-    "no-restricted-syntax": 0
+    "no-restricted-syntax": 0,
+    "no-undef": 0
   }
 }
