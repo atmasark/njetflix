@@ -4,6 +4,9 @@ import Movie from '../interfaces/movie';
 
 const movieRouter = Router();
 
+// @route   GET api/movie/getAll
+// @desc    Get a list of available movies
+// @access  Public
 movieRouter.get('/getAll', (req, res) => {
   // Keys needed for the list view
   const listKeys = ['id', 'title', 'poster'];
@@ -27,7 +30,9 @@ movieRouter.get('/getAll', (req, res) => {
   }
 });
 
-
+// @route   GET api/movie/getSingle
+// @desc    Get data of a movie
+// @access  Public
 movieRouter.get('/getSingle', (req, res) => {
   const { id } = req.query;
   try {
