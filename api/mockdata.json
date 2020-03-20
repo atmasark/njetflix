@@ -1,0 +1,798 @@
+[
+  {
+    "Title": "The Lion King",
+    "Year": "1994",
+    "Rated": "G",
+    "Released": "24 Jun 1994",
+    "Runtime": "88 min",
+    "Genre": "Animation, Adventure, Drama, Family, Musical",
+    "Director": "Roger Allers, Rob Minkoff",
+    "Writer": "Irene Mecchi (screenplay by), Jonathan Roberts (screenplay by), Linda Woolverton (screenplay by), Burny Mattinson (story), Barry Johnson (story), Lorna Cook (story), Thom Enriquez (story), Andy Gaskill (story), Gary Trousdale (story), Jim Capobianco (story), Kevin Harkey (story), Jorgen Klubien (story), Chris Sanders (story), Tom Sito (story), Larry Leker (story), Joe Ranft (story), Rick Maki (story), Ed Gombert (story), Francis Glebas (story), Mark Kausler (story), J.T. Allen (additional story material), George Scribner (additional story material), Miguel Tejada-Flores (additional story material), Jenny Tripp (additional story material), Bob Tzudiker (additional story material), Christopher Vogler (additional story material), Kirk Wise (additional story material), Noni White (additional story material), Brenda Chapman (story supervisor)",
+    "Actors": "Rowan Atkinson, Matthew Broderick, Niketa Calame-Harris, Jim Cummings",
+    "Plot": "A Lion cub crown prince is tricked by a treacherous uncle into thinking he caused his father's death and flees into exile in despair, only to learn in adulthood his identity and his responsibilities.",
+    "Language": "English, Swahili, Xhosa, Zulu",
+    "Country": "USA",
+    "Awards": "Won 2 Oscars. Another 35 wins & 34 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.5/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "93%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "88/100"
+      }
+    ],
+    "Metascore": "88",
+    "imdbRating": "8.5",
+    "imdbVotes": "887,787",
+    "imdbID": "tt0110357",
+    "Type": "movie",
+    "DVD": "07 Oct 2003",
+    "BoxOffice": "$94,240,635",
+    "Production": "Buena Vista",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "The Shawshank Redemption",
+    "Year": "1994",
+    "Rated": "R",
+    "Released": "14 Oct 1994",
+    "Runtime": "142 min",
+    "Genre": "Drama",
+    "Director": "Frank Darabont",
+    "Writer": "Stephen King (short story \"Rita Hayworth and Shawshank Redemption\"), Frank Darabont (screenplay)",
+    "Actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
+    "Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "Nominated for 7 Oscars. Another 21 wins & 35 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "90%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "80/100"
+      }
+    ],
+    "Metascore": "80",
+    "imdbRating": "9.3",
+    "imdbVotes": "2,198,260",
+    "imdbID": "tt0111161",
+    "Type": "movie",
+    "DVD": "27 Jan 1998",
+    "BoxOffice": "N/A",
+    "Production": "Columbia Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Pulp Fiction",
+    "Year": "1994",
+    "Rated": "R",
+    "Released": "14 Oct 1994",
+    "Runtime": "154 min",
+    "Genre": "Crime, Drama",
+    "Director": "Quentin Tarantino",
+    "Writer": "Quentin Tarantino (stories), Roger Avary (stories), Quentin Tarantino",
+    "Actors": "Tim Roth, Amanda Plummer, Laura Lovelace, John Travolta",
+    "Plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "Language": "English, Spanish, French",
+    "Country": "USA",
+    "Awards": "Won 1 Oscar. Another 68 wins & 74 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.9/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "92%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "94/100"
+      }
+    ],
+    "Metascore": "94",
+    "imdbRating": "8.9",
+    "imdbVotes": "1,729,577",
+    "imdbID": "tt0110912",
+    "Type": "movie",
+    "DVD": "19 May 1998",
+    "BoxOffice": "N/A",
+    "Production": "Miramax Films",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Inception",
+    "Year": "2010",
+    "Rated": "PG-13",
+    "Released": "16 Jul 2010",
+    "Runtime": "148 min",
+    "Genre": "Action, Adventure, Sci-Fi, Thriller",
+    "Director": "Christopher Nolan",
+    "Writer": "Christopher Nolan",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+    "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "Language": "English, Japanese, French",
+    "Country": "USA, UK",
+    "Awards": "Won 4 Oscars. Another 152 wins & 210 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.8/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "87%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "74/100"
+      }
+    ],
+    "Metascore": "74",
+    "imdbRating": "8.8",
+    "imdbVotes": "1,924,665",
+    "imdbID": "tt1375666",
+    "Type": "movie",
+    "DVD": "07 Dec 2010",
+    "BoxOffice": "$292,568,851",
+    "Production": "Warner Bros. Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Alien",
+    "Year": "1979",
+    "Rated": "R",
+    "Released": "22 Jun 1979",
+    "Runtime": "117 min",
+    "Genre": "Horror, Sci-Fi",
+    "Director": "Ridley Scott",
+    "Writer": "Dan O'Bannon (screenplay by), Dan O'Bannon (story by), Ronald Shusett (story by)",
+    "Actors": "Tom Skerritt, Sigourney Weaver, Veronica Cartwright, Harry Dean Stanton",
+    "Plot": "After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
+    "Language": "English",
+    "Country": "UK, USA",
+    "Awards": "Won 1 Oscar. Another 16 wins & 20 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.4/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "97%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "89/100"
+      }
+    ],
+    "Metascore": "89",
+    "imdbRating": "8.4",
+    "imdbVotes": "746,242",
+    "imdbID": "tt0078748",
+    "Type": "movie",
+    "DVD": "06 Jan 2004",
+    "BoxOffice": "N/A",
+    "Production": "20th Century Fox",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Coco",
+    "Year": "2017",
+    "Rated": "PG",
+    "Released": "22 Nov 2017",
+    "Runtime": "105 min",
+    "Genre": "Animation, Adventure, Family, Fantasy, Music, Mystery",
+    "Director": "Lee Unkrich, Adrian Molina(co-director)",
+    "Writer": "Lee Unkrich (original story by), Jason Katz (original story by), Matthew Aldrich (original story by), Adrian Molina (original story by), Adrian Molina (screenplay by), Matthew Aldrich (screenplay by)",
+    "Actors": "Anthony Gonzalez, Gael García Bernal, Benjamin Bratt, Alanna Ubach",
+    "Plot": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+    "Language": "English, Spanish",
+    "Country": "USA",
+    "Awards": "Won 2 Oscars. Another 108 wins & 35 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.4/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "97%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "81/100"
+      }
+    ],
+    "Metascore": "81",
+    "imdbRating": "8.4",
+    "imdbVotes": "320,987",
+    "imdbID": "tt2380307",
+    "Type": "movie",
+    "DVD": "27 Feb 2018",
+    "BoxOffice": "$208,487,719",
+    "Production": "Disney/Pixar",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Reservoir Dogs",
+    "Year": "1992",
+    "Rated": "R",
+    "Released": "02 Sep 1992",
+    "Runtime": "99 min",
+    "Genre": "Crime, Drama, Thriller",
+    "Director": "Quentin Tarantino",
+    "Writer": "Quentin Tarantino, Quentin Tarantino (background radio dialogue written by), Roger Avary (background radio dialogue written by)",
+    "Actors": "Harvey Keitel, Tim Roth, Michael Madsen, Chris Penn",
+    "Plot": "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "12 wins & 22 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZmExNmEwYWItYmQzOS00YjA5LTk2MjktZjEyZDE1Y2QxNjA1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "91%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "79/100"
+      }
+    ],
+    "Metascore": "79",
+    "imdbRating": "8.3",
+    "imdbVotes": "871,130",
+    "imdbID": "tt0105236",
+    "Type": "movie",
+    "DVD": "05 Nov 2002",
+    "BoxOffice": "N/A",
+    "Production": "Miramax Films",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "The Inglorious Bastards",
+    "Year": "1978",
+    "Rated": "R",
+    "Released": "01 Dec 1981",
+    "Runtime": "99 min",
+    "Genre": "Action, Adventure, War",
+    "Director": "Enzo G. Castellari",
+    "Writer": "Sandro Continenza, Sergio Grieco, Romano Migliorini, Laura Toscano, Franco Marotta, Alberto Piferi (dialogue collaboration)",
+    "Actors": "Bo Svenson, Peter Hooten, Fred Williamson, Michael Pergolani",
+    "Plot": "In 1944 France, a group of escaped American military prisoners en route to Switzerland volunteers to steal a Nazi V2 rocket warhead for the Allies.",
+    "Language": "English, German, French, Italian",
+    "Country": "Italy",
+    "Awards": "N/A",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYzRmZmJiODktMTVlMC00YzQ4LTkyYmMtYTAwODdmOTFlODNmL2ltYWdlXkEyXkFqcGdeQXVyMTYxNjkxOQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.6/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "100%"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "6.6",
+    "imdbVotes": "8,503",
+    "imdbID": "tt0076584",
+    "Type": "movie",
+    "DVD": "29 Jul 2008",
+    "BoxOffice": "N/A",
+    "Production": "Severin Films",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Good Will Hunting",
+    "Year": "1997",
+    "Rated": "R",
+    "Released": "09 Jan 1998",
+    "Runtime": "126 min",
+    "Genre": "Drama, Romance",
+    "Director": "Gus Van Sant",
+    "Writer": "Matt Damon, Ben Affleck",
+    "Actors": "Matt Damon, Ben Affleck, Stellan Skarsgård, John Mighton",
+    "Plot": "Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "Won 2 Oscars. Another 22 wins & 60 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "97%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "70/100"
+      }
+    ],
+    "Metascore": "70",
+    "imdbRating": "8.3",
+    "imdbVotes": "803,964",
+    "imdbID": "tt0119217",
+    "Type": "movie",
+    "DVD": "08 Dec 1998",
+    "BoxOffice": "N/A",
+    "Production": "Miramax Films",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Toy Story 3",
+    "Year": "2010",
+    "Rated": "G",
+    "Released": "18 Jun 2010",
+    "Runtime": "103 min",
+    "Genre": "Animation, Adventure, Comedy, Family, Fantasy",
+    "Director": "Lee Unkrich",
+    "Writer": "John Lasseter (story by), Andrew Stanton (story by), Lee Unkrich (story by), Michael Arndt (screenplay by)",
+    "Actors": "Tom Hanks, Tim Allen, Joan Cusack, Ned Beatty",
+    "Plot": "The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.",
+    "Language": "English, Spanish",
+    "Country": "USA",
+    "Awards": "Won 2 Oscars. Another 60 wins & 95 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "98%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "92/100"
+      }
+    ],
+    "Metascore": "92",
+    "imdbRating": "8.3",
+    "imdbVotes": "719,321",
+    "imdbID": "tt0435761",
+    "Type": "movie",
+    "DVD": "02 Nov 2010",
+    "BoxOffice": "$414,984,497",
+    "Production": "Walt Disney Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Face/Off",
+    "Year": "1997",
+    "Rated": "R",
+    "Released": "27 Jun 1997",
+    "Runtime": "138 min",
+    "Genre": "Action, Crime, Sci-Fi, Thriller",
+    "Director": "John Woo",
+    "Writer": "Mike Werb, Michael Colleary",
+    "Actors": "John Travolta, Nicolas Cage, Joan Allen, Alessandro Nivola",
+    "Plot": "In order to foil a terrorist plot, an FBI agent undergoes facial transplant surgery and assumes the identity of a criminal mastermind, who murdered his only son. The plan turns sour when the criminal wakes up prematurely and seeks revenge.",
+    "Language": "English, Latin",
+    "Country": "USA",
+    "Awards": "Nominated for 1 Oscar. Another 11 wins & 21 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYzFjNzIxMmEtMzY5NS00YTgzLTkwYWEtN2FjMmY0NmNkZWY3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "92%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "82/100"
+      }
+    ],
+    "Metascore": "82",
+    "imdbRating": "7.3",
+    "imdbVotes": "335,884",
+    "imdbID": "tt0119094",
+    "Type": "movie",
+    "DVD": "06 Oct 1998",
+    "BoxOffice": "N/A",
+    "Production": "Paramount Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Leaving Las Vegas",
+    "Year": "1995",
+    "Rated": "R",
+    "Released": "09 Feb 1996",
+    "Runtime": "111 min",
+    "Genre": "Drama, Romance",
+    "Director": "Mike Figgis",
+    "Writer": "John O'Brien (based upon the novel by), Mike Figgis (screenplay by)",
+    "Actors": "Nicolas Cage, Elisabeth Shue, Julian Sands, Richard Lewis",
+    "Plot": "Ben Sanderson, a Hollywood screenwriter who lost everything because of his alcoholism, arrives in Las Vegas to drink himself to death. There, he meets and forms an uneasy friendship and non-interference pact with prostitute Sera..",
+    "Language": "English, Russian",
+    "Country": "France, UK, USA",
+    "Awards": "Won 1 Oscar. Another 31 wins & 28 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNDg3MDM5NTI0MF5BMl5BanBnXkFtZTcwNDY0NDk0NA@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.5/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "90%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "82/100"
+      }
+    ],
+    "Metascore": "82",
+    "imdbRating": "7.5",
+    "imdbVotes": "109,729",
+    "imdbID": "tt0113627",
+    "Type": "movie",
+    "DVD": "24 Feb 1998",
+    "BoxOffice": "N/A",
+    "Production": "United Artists",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "The Rock",
+    "Year": "1996",
+    "Rated": "R",
+    "Released": "07 Jun 1996",
+    "Runtime": "136 min",
+    "Genre": "Action, Adventure, Thriller",
+    "Director": "Michael Bay",
+    "Writer": "David Weisberg (story), Douglas Cook (story), David Weisberg (screenplay), Douglas Cook (screenplay), Mark Rosner (screenplay)",
+    "Actors": "Sean Connery, Nicolas Cage, Ed Harris, John Spencer",
+    "Plot": "A mild-mannered chemist and an ex-con must lead the counterstrike when a rogue group of military men, led by a renegade general, threaten a nerve gas attack from Alcatraz against San Francisco.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "Nominated for 1 Oscar. Another 9 wins & 8 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZDJjOTE0N2EtMmRlZS00NzU0LWE0ZWQtM2Q3MWMxNjcwZjBhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.4/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "66%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "58/100"
+      }
+    ],
+    "Metascore": "58",
+    "imdbRating": "7.4",
+    "imdbVotes": "301,597",
+    "imdbID": "tt0117500",
+    "Type": "movie",
+    "DVD": "02 Dec 1997",
+    "BoxOffice": "N/A",
+    "Production": "Disney",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Next",
+    "Year": "2007",
+    "Rated": "PG-13",
+    "Released": "27 Apr 2007",
+    "Runtime": "96 min",
+    "Genre": "Action, Sci-Fi, Thriller",
+    "Director": "Lee Tamahori",
+    "Writer": "Gary Goldman (screenplay), Jonathan Hensleigh (screenplay), Paul Bernbaum (screenplay), Gary Goldman (screen story), Philip K. Dick (novel)",
+    "Actors": "Nicolas Cage, Julianne Moore, Jessica Biel, Thomas Kretschmann",
+    "Plot": "A Las Vegas magician who can see into the future is pursued by FBI agents seeking to use his abilities to prevent a nuclear terrorist attack.",
+    "Language": "English, French, German, Serbian",
+    "Country": "USA",
+    "Awards": "2 wins & 3 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTg3MjgyNjE1Nl5BMl5BanBnXkFtZTcwNTY1NDU0MQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.2/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "28%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "42/100"
+      }
+    ],
+    "Metascore": "42",
+    "imdbRating": "6.2",
+    "imdbVotes": "143,280",
+    "imdbID": "tt0435705",
+    "Type": "movie",
+    "DVD": "25 Sep 2007",
+    "BoxOffice": "$17,993,461",
+    "Production": "Paramount Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Gone in 60 Seconds",
+    "Year": "2000",
+    "Rated": "PG-13",
+    "Released": "09 Jun 2000",
+    "Runtime": "118 min",
+    "Genre": "Action, Crime, Thriller",
+    "Director": "Dominic Sena",
+    "Writer": "H.B. Halicki, Scott Rosenberg (screenplay)",
+    "Actors": "Nicolas Cage, Giovanni Ribisi, Angelina Jolie, T.J. Cross",
+    "Plot": "A retired master car thief must come back to the industry and steal fifty cars with his crew in one night to save his brother's life.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "9 wins & 6 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTIwMzExNDEwN15BMl5BanBnXkFtZTYwODMxMzg2._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.5/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "25%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "35/100"
+      }
+    ],
+    "Metascore": "35",
+    "imdbRating": "6.5",
+    "imdbVotes": "251,813",
+    "imdbID": "tt0187078",
+    "Type": "movie",
+    "DVD": "05 Dec 2000",
+    "BoxOffice": "$100,978,700",
+    "Production": "Buena Vista Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Ghost Rider",
+    "Year": "2007",
+    "Rated": "PG-13",
+    "Released": "16 Feb 2007",
+    "Runtime": "110 min",
+    "Genre": "Action, Fantasy, Thriller",
+    "Director": "Mark Steven Johnson",
+    "Writer": "Mark Steven Johnson (screenplay), Mark Steven Johnson (screen story)",
+    "Actors": "Matt Long, Raquel Alessi, Brett Cullen, Peter Fonda",
+    "Plot": "When motorcycle rider Johnny Blaze sells his soul to the Devil to save his father's life, he is transformed into the Ghost Rider, the Devil's own bounty hunter, and is sent to hunt down sinners.",
+    "Language": "English",
+    "Country": "USA, Australia",
+    "Awards": "1 win & 9 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzIyNDE5ODI1OV5BMl5BanBnXkFtZTcwNTIyNDE0MQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.2/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "26%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "35/100"
+      }
+    ],
+    "Metascore": "35",
+    "imdbRating": "5.2",
+    "imdbVotes": "215,141",
+    "imdbID": "tt0259324",
+    "Type": "movie",
+    "DVD": "12 Jun 2007",
+    "BoxOffice": "$115,802,596",
+    "Production": "Sony Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Knowing",
+    "Year": "2009",
+    "Rated": "PG-13",
+    "Released": "20 Mar 2009",
+    "Runtime": "121 min",
+    "Genre": "Action, Drama, Mystery, Sci-Fi, Thriller",
+    "Director": "Alex Proyas",
+    "Writer": "Ryne Douglas Pearson (screenplay), Juliet Snowden (screenplay), Stiles White (screenplay), Ryne Douglas Pearson (story)",
+    "Actors": "Nicolas Cage, Chandler Canterbury, Rose Byrne, Lara Robinson",
+    "Plot": "M.I.T. professor John Koestler links a mysterious list of numbers from a time capsule to past and future disasters and sets out to prevent the ultimate catastrophe.",
+    "Language": "English",
+    "Country": "USA, UK, Australia",
+    "Awards": "1 win & 5 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTMyMjgyMDIyM15BMl5BanBnXkFtZTcwNjg3MjAyMg@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.2/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "33%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "41/100"
+      }
+    ],
+    "Metascore": "41",
+    "imdbRating": "6.2",
+    "imdbVotes": "213,843",
+    "imdbID": "tt0448011",
+    "Type": "movie",
+    "DVD": "07 Jul 2009",
+    "BoxOffice": "$79,948,113",
+    "Production": "Summit Entertainment",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "The Family Man",
+    "Year": "2000",
+    "Rated": "PG-13",
+    "Released": "22 Dec 2000",
+    "Runtime": "125 min",
+    "Genre": "Comedy, Drama, Fantasy, Romance",
+    "Director": "Brett Ratner",
+    "Writer": "David Diamond, David Weissman",
+    "Actors": "Nicolas Cage, Téa Leoni, Don Cheadle, Jeremy Piven",
+    "Plot": "A fast-lane investment broker, offered the opportunity to see how the other half lives, wakes up to find that his sports car and girlfriend have become a mini-van and wife.",
+    "Language": "English, Italian",
+    "Country": "USA",
+    "Awards": "4 wins & 6 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYzYzMTQ4NDYtNWRkZi00NTYxLThlZDItMzI1MmU1MmU5ZWQ3XkEyXkFqcGdeQXVyNDA5Mjg5MjA@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.8/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "53%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "42/100"
+      }
+    ],
+    "Metascore": "42",
+    "imdbRating": "6.8",
+    "imdbVotes": "99,756",
+    "imdbID": "tt0218967",
+    "Type": "movie",
+    "DVD": "17 Jul 2001",
+    "BoxOffice": "N/A",
+    "Production": "Universal Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Adaptation.",
+    "Year": "2002",
+    "Rated": "R",
+    "Released": "14 Feb 2003",
+    "Runtime": "115 min",
+    "Genre": "Comedy, Drama",
+    "Director": "Spike Jonze",
+    "Writer": "Susan Orlean (book), Charlie Kaufman (screenplay)",
+    "Actors": "Nicolas Cage, Tilda Swinton, Meryl Streep, Chris Cooper",
+    "Plot": "A lovelorn screenwriter becomes desperate as he tries and fails to adapt 'The Orchid Thief' by Susan Orlean for the screen.",
+    "Language": "English, Latin",
+    "Country": "USA",
+    "Awards": "Won 1 Oscar. Another 64 wins & 100 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZjIwZWU0ZDItNzBlNS00MDIwLWFlZjctZTJjODdjZWYxNzczL2ltYWdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.7/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "91%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "83/100"
+      }
+    ],
+    "Metascore": "83",
+    "imdbRating": "7.7",
+    "imdbVotes": "168,977",
+    "imdbID": "tt0268126",
+    "Type": "movie",
+    "DVD": "20 May 2003",
+    "BoxOffice": "$22,184,735",
+    "Production": "Columbia Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Mandy",
+    "Year": "2018",
+    "Rated": "Not Rated",
+    "Released": "14 Sep 2018",
+    "Runtime": "121 min",
+    "Genre": "Action, Fantasy, Horror, Mystery, Thriller",
+    "Director": "Panos Cosmatos",
+    "Writer": "Panos Cosmatos, Aaron Stewart-Ahn, Panos Cosmatos (story by), Chris 'Casper' Kelly (Cheddar Goblin ad)",
+    "Actors": "Nicolas Cage, Andrea Riseborough, Linus Roache, Ned Dennehy",
+    "Plot": "The enchanted lives of a couple in a secluded forest are brutally shattered by a nightmarish hippie cult and their demon-biker henchmen, propelling a man into a spiraling, surreal rampage of vengeance.",
+    "Language": "English",
+    "Country": "UK, Belgium, USA",
+    "Awards": "12 wins & 40 nominations.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjk1MjhmZWQtNzU3OC00NDE4LThlODQtNTdhZGM4M2E3MWZkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.6/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "90%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "81/100"
+      }
+    ],
+    "Metascore": "81",
+    "imdbRating": "6.6",
+    "imdbVotes": "54,130",
+    "imdbID": "tt6998518",
+    "Type": "movie",
+    "DVD": "30 Oct 2018",
+    "BoxOffice": "N/A",
+    "Production": "RLJE Films",
+    "Website": "N/A",
+    "Response": "True"
+  }
+]
