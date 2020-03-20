@@ -37,6 +37,16 @@
     "import/no-unresolved": 0,
     "guard-for-in": 0,
     "no-restricted-syntax": 0,
-    "no-undef": 0
+    "react/jsx-filename-extension": [
+      0,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ]
   }
 }
