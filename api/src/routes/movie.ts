@@ -5,7 +5,7 @@ const movieRouter = Router();
 
 movieRouter.get('/getAll', (req, res) => {
   // Keys needed for the list view
-  const listKeys = ['title', 'poster'];
+  const listKeys = ['id', 'title', 'poster'];
 
   const listData = movieData.map((movie) => Object.keys(movie)
     .filter((key) => listKeys.includes(key))
