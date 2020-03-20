@@ -2,9 +2,13 @@
  * Main entry point for the application
  */
 import express from 'express';
+import movieRouter from './routes/movie';
 
 const PORT = 2500;
+
 const app = express();
+
+app.use('/movie/', movieRouter);
 
 // catch invalid routes
 app.all('*', (request, response) => response.sendStatus(404));
