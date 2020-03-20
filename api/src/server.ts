@@ -8,7 +8,7 @@ const PORT = 2500;
 
 const app = express();
 
-app.use('/movie/', movieRouter);
+app.use('/api/movie/', movieRouter);
 
 // catch invalid routes
 app.all('*', (request, response) => response.sendStatus(404));
