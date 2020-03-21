@@ -1,23 +1,23 @@
 import axios from 'axios';
 import { Dispatch } from 'redux';
 import {
-  fetchMoviesRequest,
-  fetchMoviesSuccess,
-  fetchMoviesFailure,
+  fetchMovieListRequest,
+  fetchMovieListSuccess,
+  fetchMovieListFailure,
   fetchCurrentMovieRequest,
   fetchCurrentMovieFailure,
   fetchCurrentMovieSuccess,
 } from './actions';
 
-import { FetchMoviesActionTypes, FetchCurrentMovieActionTypes } from './types';
+import { FetchMovieListActionTypes, FetchCurrentMovieActionTypes } from './types';
 
-export const fetchMovies = () => async (dispatch: Dispatch<FetchMoviesActionTypes>) => {
+export const fetchMovieList = () => async (dispatch: Dispatch<FetchMovieListActionTypes>) => {
   try {
-    dispatch(fetchMoviesRequest());
+    dispatch(fetchMovieListRequest());
     const response = await axios.get('http://localhost:2500/api/movie/getAll');
-    return dispatch(fetchMoviesSuccess(response.data.list));
+    return dispatch(fetchMovieListSuccess(response.data.list));
   } catch (err) {
-    dispatch(fetchMoviesFailure(err.response.data.msg));
+    dispatch(fetchMovieListFailure(err.response.data.msg));
   }
 };
 

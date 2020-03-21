@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchMovies } from './state/modules/movies';
+import { fetchMovieList } from './state/modules/movies';
 import './index.css';
 
 const App = ({ dispatch }: any) => {
   useEffect(() => {
-    dispatch(fetchMovies());
+    dispatch(fetchMovieList());
   }, []);
   return (
     <p> Hello world</p>

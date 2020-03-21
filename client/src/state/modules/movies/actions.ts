@@ -1,28 +1,28 @@
 import {
-  FETCH_MOVIES_REQUEST,
-  FETCH_MOVIES_SUCCESS,
-  FETCH_MOVIES_FAILURE,
+  FETCH_MOVIE_LIST_REQUEST,
+  FETCH_MOVIE_LIST_SUCCESS,
+  FETCH_MOVIE_LIST_FAILURE,
   FETCH_CURRENT_MOVIE_REQUEST,
   FETCH_CURRENT_MOVIE_SUCCESS,
   FETCH_CURRENT_MOVIE_FAILURE,
   FetchCurrentMovieActionTypes,
-  FetchMoviesActionTypes,
+  FetchMovieListActionTypes,
   ListElement,
   Movie,
 } from './types';
 
 // Actions for fetching movie list
-export const fetchMoviesRequest = (): FetchMoviesActionTypes => ({
-  type: FETCH_MOVIES_REQUEST,
+export const fetchMovieListRequest = (): FetchMovieListActionTypes => ({
+  type: FETCH_MOVIE_LIST_REQUEST,
 });
 
-export const fetchMoviesSuccess = (list: ListElement[]): FetchMoviesActionTypes => ({
-  type: FETCH_MOVIES_SUCCESS,
+export const fetchMovieListSuccess = (list: ListElement[]): FetchMovieListActionTypes => ({
+  type: FETCH_MOVIE_LIST_SUCCESS,
   list,
 });
 
-export const fetchMoviesFailure = (error: string): FetchMoviesActionTypes => ({
-  type: FETCH_MOVIES_FAILURE,
+export const fetchMovieListFailure = (error: string): FetchMovieListActionTypes => ({
+  type: FETCH_MOVIE_LIST_FAILURE,
   error,
 });
 

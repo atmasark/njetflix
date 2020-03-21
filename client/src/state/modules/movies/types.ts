@@ -1,29 +1,29 @@
-export const FETCH_MOVIES_REQUEST = 'FETCH_MOVIES_REQUEST';
-export const FETCH_MOVIES_SUCCESS = 'FETCH_MOVIES_SUCCESS';
-export const FETCH_MOVIES_FAILURE = 'FETCH_MOVIES_FAILURE';
+export const FETCH_MOVIE_LIST_REQUEST = 'FETCH_MOVIE_LIST_REQUEST';
+export const FETCH_MOVIE_LIST_SUCCESS = 'FETCH_MOVIE_LIST_SUCCESS';
+export const FETCH_MOVIE_LIST_FAILURE = 'FETCH_MOVIE_LIST_FAILURE';
 export const FETCH_CURRENT_MOVIE_REQUEST = 'FETCH_CURRENT_MOVIE_REQUEST';
 export const FETCH_CURRENT_MOVIE_SUCCESS = 'FETCH_CURRENT_MOVIE_SUCCESS';
 export const FETCH_CURRENT_MOVIE_FAILURE = 'FETCH_CURRENT_MOVIE_FAILURE';
 
 // Typings for fetching all movies
-interface FetchMoviesRequestAction {
-  type: typeof FETCH_MOVIES_REQUEST
+interface FetchMovieListRequestAction {
+  type: typeof FETCH_MOVIE_LIST_REQUEST
 }
 
-interface FetchMoviesSuccessAction {
-  type: typeof FETCH_MOVIES_SUCCESS
+interface FetchMovieListSuccessAction {
+  type: typeof FETCH_MOVIE_LIST_SUCCESS
   list: ListElement[]
 }
 
-interface FetchMoviesFailureAction {
-  type: typeof FETCH_MOVIES_FAILURE
+interface FetchMovieListFailureAction {
+  type: typeof FETCH_MOVIE_LIST_FAILURE
   error: string
 }
 
-export type FetchMoviesActionTypes =
-  | FetchMoviesRequestAction
-  | FetchMoviesSuccessAction
-  | FetchMoviesFailureAction
+export type FetchMovieListActionTypes =
+  | FetchMovieListRequestAction
+  | FetchMovieListSuccessAction
+  | FetchMovieListFailureAction
 
 // Typings for fetching single movie
 interface FetchCurrentMovieRequestAction {
