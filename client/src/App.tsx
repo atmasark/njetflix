@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovieList } from './state/modules/movies';
-import './index.css';
+import './index.scss';
 
 const App = ({ dispatch }: any) => {
   useEffect(() => {
