@@ -1,5 +1,5 @@
 import reducers from './reducers';
-import fetchMovies from './thunks';
+import { fetchMovies, fetchCurrentMovie } from './thunks';
 
-export { fetchMovies };
+export { fetchMovies, fetchCurrentMovie };
 export default reducers;

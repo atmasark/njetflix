@@ -4,11 +4,14 @@ import {
   fetchMoviesRequest,
   fetchMoviesSuccess,
   fetchMoviesFailure,
+  fetchCurrentMovieRequest,
+  fetchCurrentMovieFailure,
+  fetchCurrentMovieSuccess,
 } from './actions';
 
-import { FetchMoviesActionTypes } from './types';
+import { FetchMoviesActionTypes, FetchCurrentMovieActionTypes } from './types';
 
-const fetchMovies = () => async (dispatch: Dispatch<FetchMoviesActionTypes>) => {
+export const fetchMovies = () => async (dispatch: Dispatch<FetchMoviesActionTypes>) => {
   try {
     dispatch(fetchMoviesRequest());
     const response = await axios.get('http://localhost:2500/api/movie/getAll');
@@ -18,4 +21,14 @@ const fetchMovies = () => async (dispatch: Dispatch<FetchMoviesActionTypes>) => 
   }
 };
 
-export default fetchMovies;
+export const fetchCurrentMovie = (id: number) => async (
+  dispatch: Dispatch<FetchCurrentMovieActionTypes>,
+) => {
+  try {
+    dispatch(fetchCurrentMovieRequest());
+    const response = await axios.get(`http://localhost:2500/api/movie/getSingle?id=${id}`);
+    return dispatch(fetchCurrentMovieSuccess(response.data.current));
+  } catch (err) {
+    dispatch(fetchCurrentMovieFailure());
+  }
+};

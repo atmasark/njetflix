@@ -2,8 +2,12 @@ import {
   FETCH_MOVIES_REQUEST,
   FETCH_MOVIES_SUCCESS,
   FETCH_MOVIES_FAILURE,
+  FETCH_CURRENT_MOVIE_REQUEST,
+  FETCH_CURRENT_MOVIE_SUCCESS,
+  FETCH_CURRENT_MOVIE_FAILURE,
   MovieState,
   FetchMoviesActionTypes,
+  FetchCurrentMovieActionTypes,
 
 } from './types';
 
@@ -12,9 +16,17 @@ const initialState = {
     isLoading: false,
     data: [],
   },
+  current: {
+    isLoading: false,
+    data: {},
+  },
 };
 
-const fetchMoviesReducer = (state: MovieState = initialState, action: FetchMoviesActionTypes) => {
+
+export default (
+  state: MovieState = initialState,
+  action: FetchMoviesActionTypes | FetchCurrentMovieActionTypes,
+) => {
   switch (action.type) {
     case FETCH_MOVIES_REQUEST:
       return {
@@ -40,9 +52,31 @@ const fetchMoviesReducer = (state: MovieState = initialState, action: FetchMovie
           ...state.list,
         },
       };
+    case FETCH_CURRENT_MOVIE_REQUEST:
+      return {
+        ...state,
+        current: {
+          isLoading: true,
+          ...state.current,
+        },
+      };
+    case FETCH_CURRENT_MOVIE_SUCCESS:
+      return {
+        ...state,
+        current: {
+          isLoading: false,
+          data: action.current,
+        },
+      };
+    case FETCH_CURRENT_MOVIE_FAILURE:
+      return {
+        ...state,
+        current: {
+          isLoading: false,
+          ...state.current,
+        },
+      };
     default:
       return state;
   }
 };
-
-export default fetchMoviesReducer;
