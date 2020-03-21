@@ -15,10 +15,12 @@ const initialState = {
   list: {
     isLoading: false,
     data: [],
+    error: null,
   },
   current: {
     isLoading: false,
     data: {},
+    error: null,
   },
 };
 
@@ -32,8 +34,8 @@ export default (
       return {
         ...state,
         list: {
-          isLoading: true,
           ...state.list,
+          isLoading: true,
         },
       };
     case FETCH_MOVIES_SUCCESS:
@@ -48,16 +50,17 @@ export default (
       return {
         ...state,
         list: {
-          isLoading: false,
           ...state.list,
+          isLoading: false,
+          error: action.error,
         },
       };
     case FETCH_CURRENT_MOVIE_REQUEST:
       return {
         ...state,
         current: {
-          isLoading: true,
           ...state.current,
+          isLoading: true,
         },
       };
     case FETCH_CURRENT_MOVIE_SUCCESS:
@@ -72,8 +75,9 @@ export default (
       return {
         ...state,
         current: {
-          isLoading: false,
           ...state.current,
+          isLoading: false,
+          error: action.error,
         },
       };
     default:

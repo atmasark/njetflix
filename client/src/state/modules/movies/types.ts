@@ -17,6 +17,7 @@ interface FetchMoviesSuccessAction {
 
 interface FetchMoviesFailureAction {
   type: typeof FETCH_MOVIES_FAILURE
+  error: string
 }
 
 export type FetchMoviesActionTypes =
@@ -36,6 +37,7 @@ interface FetchCurrentMovieSuccessAction {
 
 interface FetchCurrentMovieFailureAction {
   type: typeof FETCH_CURRENT_MOVIE_FAILURE
+  error: string
 }
 
 export type FetchCurrentMovieActionTypes =
@@ -53,6 +55,7 @@ export interface MovieState {
 interface ListState {
   isLoading: boolean
   data: ListElement[]
+  error?: string | null
 }
 
 export interface ListElement {
@@ -64,6 +67,7 @@ export interface ListElement {
 interface CurrentMovieState {
   isLoading: boolean
   data: Movie | {}
+  error?: string | null
 }
 
 export interface Movie {

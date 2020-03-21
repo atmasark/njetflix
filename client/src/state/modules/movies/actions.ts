@@ -21,8 +21,9 @@ export const fetchMoviesSuccess = (list: ListElement[]): FetchMoviesActionTypes 
   list,
 });
 
-export const fetchMoviesFailure = (): FetchMoviesActionTypes => ({
+export const fetchMoviesFailure = (error: string): FetchMoviesActionTypes => ({
   type: FETCH_MOVIES_FAILURE,
+  error,
 });
 
 // Actions for fetching a single movie
@@ -35,6 +36,7 @@ export const fetchCurrentMovieSuccess = (current: Movie): FetchCurrentMovieActio
   current,
 });
 
-export const fetchCurrentMovieFailure = (): FetchCurrentMovieActionTypes => ({
+export const fetchCurrentMovieFailure = (error: string): FetchCurrentMovieActionTypes => ({
   type: FETCH_CURRENT_MOVIE_FAILURE,
+  error,
 });
