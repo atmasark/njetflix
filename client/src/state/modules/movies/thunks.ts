@@ -6,9 +6,9 @@ import {
   fetchMoviesFailure,
 } from './actions';
 
-import { MovieActionTypes } from './types';
+import { FetchMoviesActionTypes } from './types';
 
-const fetchMovies = () => async (dispatch: Dispatch<MovieActionTypes>) => {
+const fetchMovies = () => async (dispatch: Dispatch<FetchMoviesActionTypes>) => {
   try {
     dispatch(fetchMoviesRequest());
     const response = await axios.get('http://localhost:2500/api/movie/getAll');
@@ -17,4 +17,5 @@ const fetchMovies = () => async (dispatch: Dispatch<MovieActionTypes>) => {
     dispatch(fetchMoviesFailure());
   }
 };
+
 export default fetchMovies;

@@ -3,7 +3,8 @@ import {
   FETCH_MOVIES_SUCCESS,
   FETCH_MOVIES_FAILURE,
   MovieState,
-  MovieActionTypes,
+  FetchMoviesActionTypes,
+
 } from './types';
 
 const initialState = {
@@ -13,8 +14,7 @@ const initialState = {
   },
 };
 
-
-const fetchMoviesReducer = (state: MovieState = initialState, action: MovieActionTypes) => {
+const fetchMoviesReducer = (state: MovieState = initialState, action: FetchMoviesActionTypes) => {
   switch (action.type) {
     case FETCH_MOVIES_REQUEST:
       return {

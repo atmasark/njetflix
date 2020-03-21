@@ -15,7 +15,7 @@ interface FetchMoviesFailureAction {
   type: typeof FETCH_MOVIES_FAILURE
 }
 
-export type MovieActionTypes =
+export type FetchMoviesActionTypes =
   | FetchMoviesRequestAction
   | FetchMoviesSuccessAction
   | FetchMoviesFailureAction
