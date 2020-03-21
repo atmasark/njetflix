@@ -7,7 +7,10 @@ import movieRouter from './routes/movie';
 const PORT = 2500;
 
 const app = express();
-
+app.use((_, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  next();
+});
 app.use('/api/movie/', movieRouter);
 
 // catch invalid routes
