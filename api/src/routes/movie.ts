@@ -8,11 +8,11 @@ const movieRouter = Router();
 // @desc    Get a list of available movies
 // @access  Public
 movieRouter.get('/getAll', (req, res) => {
-  // Keys needed for the list view
-  const listKeys = ['id', 'title', 'poster'];
+  // Filter only some of the keys for the list
+  const keysForList = ['id', 'title', 'poster', 'genre'];
   try {
     const listData = movieData.map((movie: Movie) => Object.keys(movie)
-      .filter((key) => listKeys.includes(key))
+      .filter((key) => keysForList.includes(key))
       .reduce((obj, key) => {
         obj[key] = movie[key];
         return obj;
