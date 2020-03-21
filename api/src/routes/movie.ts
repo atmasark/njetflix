@@ -20,7 +20,7 @@ movieRouter.get('/getAll', (req, res) => {
     return res.status(200).json({
       success: true,
       msg: 'Movie list fetch successful',
-      data: listData,
+      list: listData,
     });
   } catch (err) {
     return res.status(500).json({
@@ -52,7 +52,7 @@ movieRouter.get('/getSingle', (req, res) => {
     return res.status(200).json({
       success: true,
       msg: 'Single movie fetch successful',
-      data: queriedMovie,
+      current: queriedMovie,
     });
   } catch (err) {
     return res.status(500).json({
