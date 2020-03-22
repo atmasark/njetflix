@@ -8,6 +8,7 @@ import {
 import { fetchMovieList } from './state/modules/movies';
 import Header from './components/Header';
 import Genres from './components/Genres';
+import AllMovies from './components/AllMovies';
 
 import './index.scss';
 
@@ -19,8 +20,11 @@ const App = ({ dispatch }: any) => {
     <Router>
       <Header />
       <Switch>
-        <Route path="/">
+        <Route path="/genres">
           <Genres />
+        </Route>
+        <Route path="/">
+          <AllMovies />
         </Route>
       </Switch>
     </Router>
