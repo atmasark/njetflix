@@ -6,7 +6,7 @@ export const FETCH_CURRENT_MOVIE_SUCCESS = 'FETCH_CURRENT_MOVIE_SUCCESS';
 export const FETCH_CURRENT_MOVIE_FAILURE = 'FETCH_CURRENT_MOVIE_FAILURE';
 export const SET_ACTIVE_GENRE = 'SET_ACTIVE_GENRE';
 
-export interface setActiveGenreType {
+export interface SetActiveGenreType {
   type: typeof SET_ACTIVE_GENRE
   activeGenre: string
 }

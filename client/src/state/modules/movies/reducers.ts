@@ -6,7 +6,7 @@ import {
   FETCH_CURRENT_MOVIE_SUCCESS,
   FETCH_CURRENT_MOVIE_FAILURE,
   SET_ACTIVE_GENRE,
-  setActiveGenreType,
+  SetActiveGenreType,
   MovieState,
   FetchMovieListActionTypes,
   FetchCurrentMovieActionTypes,
@@ -30,7 +30,7 @@ const initialState = {
 
 export default (
   state: MovieState = initialState,
-  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | setActiveGenreType,
+  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | SetActiveGenreType,
 ) => {
   switch (action.type) {
     case FETCH_MOVIE_LIST_REQUEST:
