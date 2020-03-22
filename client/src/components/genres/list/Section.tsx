@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import SectionHeader from './section/SectionHeader'
-import ScrollableList from './section/ScrollableList'
+import SectionHeader from './section/SectionHeader';
+import ScrollableList from './section/ScrollableList';
 import { ListElement, Genre } from '../../types';
 
 const Wrapper = styled.div`
   margin-bottom: 200px;
 `;
 
-export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: string | null; setActiveGenre?: (genre: string) => void; refs: any; }) => {
-  const { genre, movies, activeGenre, setActiveGenre, refs } = props;
-  let moviesInGenre = movies.filter((movie: ListElement) => movie.genre.includes(genre.name));
+export default (props: {
+  genre: Genre;
+  movies: ListElement[];
+  activeGenre?: string | null;
+  setActiveGenre?: (genre: string) => void;
+  refs: any;
+}) => {
+  const {
+    genre, movies, activeGenre, setActiveGenre, refs,
+  } = props;
+  const moviesInGenre = movies.filter((movie: ListElement) => movie.genre.includes(genre.name));
 
   const [pageHeight, setPageHeight] = useState<number>(window.innerHeight);
 
@@ -24,7 +32,7 @@ export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: stri
   }, []);
 
 
-  let observerMargin = Math.floor(pageHeight / 2);
+  const observerMargin = Math.floor(pageHeight / 2);
   useEffect(() => {
     const options = {
       rootMargin: `-${
@@ -34,7 +42,7 @@ export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: stri
     const intersectionCallback = (entries: any) => {
       entries.forEach((entry: any) => {
         if (entry.target.id !== activeGenre && entry.isIntersecting) {
-          // @ts-ignore 
+          // @ts-ignore
           setActiveGenre(entry.target.id);
         }
       });
@@ -47,8 +55,13 @@ export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: stri
 
   return (
     <Wrapper id={genre.name} ref={refs[genre.name]}>
-      <SectionHeader genre={genre} amountOfMovies={movies.length} />
-      <ScrollableList moviesInGenre={moviesInGenre} />
-    </Wrapper >
+      <SectionHeader
+        genre={genre}
+        amountOfMovies={movies.length}
+      />
+      <ScrollableList
+        moviesInGenre={moviesInGenre}
+      />
+    </Wrapper>
   );
 };
