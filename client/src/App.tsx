@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovieList } from './state/modules/movies';
 import Header from './components/Header';
-import Main from './components/Main';
+import Content from './components/Content';
 
 import './index.scss';
 
@@ -13,7 +13,7 @@ const App = ({ dispatch }: any) => {
   return (
     <>
       <Header />
-      <Main />
+      <Content />
     </>
   );
 };

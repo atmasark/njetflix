@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { getAllGenres } from '../../state/modules/movies/selectors';
-import List from './content/List';
+import Section from './list/Section';
 import { Genre, ListElement, State } from '../types';
 
 const Wrapper = styled.div`
@@ -16,8 +16,8 @@ const Content = (props: { movies: ListElement[]; genres: Genre[] }) => {
   if (movies) {
     return (
       <Wrapper>
-        <List genre="All" movies={movies} />
-        {genres.map((genre: Genre) => <List key={genre.name} genre={genre} movies={movies} />)}
+        <Section genre="All" movies={movies} />
+        {genres.map((genre: Genre) => <Section key={genre.name} genre={genre} movies={movies} />)}
       </Wrapper>
     );
   } else return <></>

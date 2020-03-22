@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Content from './main/Content';
-import Sidebar from './main/Sidebar';
+import List from './content/List';
+import Sidebar from './content/Sidebar';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,6 +10,6 @@ const Wrapper = styled.div`
 export default () => (
   <Wrapper>
     <Sidebar />
-    <Content />
+    <List />
   </Wrapper>
 );

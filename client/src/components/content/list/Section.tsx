@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import SectionHeader from './list/SectionHeader'
-import ScrollableList from './list/ScrollableList'
+import SectionHeader from './section/SectionHeader'
+import ScrollableList from './section/ScrollableList'
 import { ListElement } from '../../types';
 
 const Wrapper = styled.div`
