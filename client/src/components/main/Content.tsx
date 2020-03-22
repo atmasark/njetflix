@@ -13,14 +13,14 @@ const Wrapper = styled.div`
 
 const Content = (props: { movies: ListElement[]; genres: Genre[] }) => {
   const { movies, genres } = props;
-  return (
-    <Wrapper>
-      {movies && <List genre="All" movies={movies} />}
-      {movies
-        && genres.map((genre: Genre) => <List genre={genre} movies={movies} />)}
-
-    </Wrapper>
-  );
+  if (movies) {
+    return (
+      <Wrapper>
+        <List genre="All" movies={movies} />
+        {genres.map((genre: Genre) => <List genre={genre} movies={movies} />)}
+      </Wrapper>
+    );
+  } else return <></>
 };
 
 const mapStateToProps = (state: State) => ({
