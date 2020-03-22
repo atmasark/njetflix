@@ -1,9 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { getAllGenres } from '../../state/modules/movies/selectors';
 import Section from './list/Section';
-import { Genre, ListElement, State } from '../types';
+import { Genre, ListElement } from '../types';
 
 const Wrapper = styled.div`
   flex: 2.1 1;
@@ -11,21 +9,12 @@ const Wrapper = styled.div`
   padding-top: 100px;
 `;
 
-const Content = (props: { movies: ListElement[]; genres: Genre[] }) => {
-  const { movies, genres } = props;
-  if (movies) {
-    return (
-      <Wrapper>
-        <Section genre="All" movies={movies} />
-        {genres.map((genre: Genre) => <Section key={genre.name} genre={genre} movies={movies} />)}
-      </Wrapper>
-    );
-  } else return <></>
+export default (props: { movies: ListElement[]; genres: Genre[]; activeGenre: string | null; setActiveGenre: (genre: string) => void; refs: any; }) => {
+  const { movies, genres, activeGenre, setActiveGenre, refs } = props;
+
+  return (
+    <Wrapper>
+      {genres.map((genre: Genre) => <Section key={genre.name} genre={genre} movies={movies} activeGenre={activeGenre} setActiveGenre={setActiveGenre} refs={refs} />)}
+    </Wrapper>
+  )
 };
-
-const mapStateToProps = (state: State) => ({
-  movies: state.movies.list.data,
-  genres: getAllGenres(state),
-});
-
-export default connect(mapStateToProps)(Content);

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Genre } from '../../../types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const ShowAll = styled.p`
 `;
 
 
-export default (props: { genre: any; amountOfMovies: number }) => {
+export default (props: { genre: Genre; amountOfMovies: number }) => {
   const { genre, amountOfMovies } = props;
   return (
     <Wrapper>

@@ -1,9 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import styled from 'styled-components';
-import { Genre, ListElement } from '../types';
-import { setActiveGenre } from '../../state/modules/movies/thunks';
-import { getAllGenres } from '../../state/modules/movies/selectors';
+import styled, { keyframes } from 'styled-components';
+import { Genre } from '../types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,48 +12,43 @@ const List = styled.ul`
   top: 50%;
   transform: translate(0,-50%);
   list-style: none;
+  padding-left: 0;
 `;
+
+const bringForwards = keyframes`
+  from {
+    padding: 5px 0 5px 15px;
+  }
+  to {
+    padding: 5px 0 5px 30px;
+  }
+`
 
 const ListItem = styled.li.attrs((props: { isActive: boolean }) => ({
   isActive: props.isActive,
 }))`
   background: ${(props) => props.isActive && 'linear-gradient(90deg, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0) 100%)'};
-  padding-left: ${(props) => props.isActive && '20px'};
+  font-size: 20px;
+  padding: 5px 0 5px 15px;
+  animation: ${(p: { isActive: boolean }) =>
+    p.isActive && bringForwards}
+    ease-out 0.25s forwards;
 `;
 
-const Navigation = (props: { movies: ListElement[]; genres: Genre[]; activeGenre: string; setActiveGenre: any; }) => {
-  const { movies, genres, activeGenre, setActiveGenre } = props;
-  const handleOnClick = (genre: string) => {
-    setActiveGenre(genre)
-  }
-  if (movies) {
-    return (
-      <Wrapper>
-        <List>
-          {genres.map((genre: Genre) =>
-            <ListItem
-              isActive={genre.name === activeGenre}
-              onClick={() => handleOnClick(genre.name)}
-              key={genre.name}>
-              {genre.name}
-            </ListItem>)}
-        </List>
-      </Wrapper>
-    )
-  } else return <></>
+export default (props: { genres: Genre[]; activeGenre: string | null; handleClick: (genre: string) => void; }) => {
+  const { genres, activeGenre, handleClick } = props;
+  return (
+    <Wrapper>
+      <List>
+        {genres.map((genre: Genre) =>
+          <ListItem
+            isActive={genre.name === activeGenre}
+            onClick={() => handleClick(genre.name)}
+            key={genre.name}>
+            {genre.name}
+          </ListItem>)}
+      </List>
+    </Wrapper>
+  )
 };
 
-
-const mapStateToProps = (state: any) => ({
-  movies: state.movies.list.data,
-  genres: getAllGenres(state),
-  activeGenre: state.movies.activeGenre,
-})
-
-const mapDispatchToProps = (dispatch: any) => ({
-  setActiveGenre(genre: string) {
-    dispatch(setActiveGenre(genre))
-  }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation)
