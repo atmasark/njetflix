@@ -14,11 +14,6 @@ const Title = styled.p`
   margin: 0;
 `;
 
-const ShowAll = styled.p`
-  padding-right: 15px;
-  margin: 0;
-`;
-
 
 export default (props: { genre: Genre; amountOfMovies: number }) => {
   const { genre, amountOfMovies } = props;
@@ -28,11 +23,9 @@ export default (props: { genre: Genre; amountOfMovies: number }) => {
         {genre.name || 'All movies'}
         {' '}
         (
-          {genre.count || amountOfMovies}
+        {genre.count || amountOfMovies}
         )
-        </Title>
-      <ShowAll>Show all</ShowAll>
+      </Title>
     </Wrapper>
   );
 };
-
