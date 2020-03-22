@@ -27,6 +27,12 @@ const ScrollableList = styled.div`
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 `;
 
 const Movie = styled.div.attrs((props: any) => ({
