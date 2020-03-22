@@ -6,7 +6,7 @@ import { Genre, ListElement } from '../types';
 const Wrapper = styled.div`
   flex: 2.1 1;
   width: 75%;
-  padding-top: 100px;
+  padding: 250px 0px;
 `;
 
 export default (props: { movies: ListElement[]; genres: Genre[]; activeGenre: string | null; setActiveGenre: (genre: string) => void; refs: any; }) => {
