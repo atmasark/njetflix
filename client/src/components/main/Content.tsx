@@ -17,7 +17,7 @@ const Content = (props: { movies: ListElement[]; genres: Genre[] }) => {
     return (
       <Wrapper>
         <List genre="All" movies={movies} />
-        {genres.map((genre: Genre) => <List genre={genre} movies={movies} />)}
+        {genres.map((genre: Genre) => <List key={genre.name} genre={genre} movies={movies} />)}
       </Wrapper>
     );
   } else return <></>

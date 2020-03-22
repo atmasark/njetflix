@@ -14,7 +14,7 @@ export default (props: { genres: Genre[] }) => {
   const { genres } = props;
   return (
     <List>
-      {genres.map((genre: Genre) => <ListItem>{genre.name}</ListItem>)}
+      {genres.map((genre: Genre) => <ListItem key={genre.name}>{genre.name}</ListItem>)}
     </List>
   )
 };

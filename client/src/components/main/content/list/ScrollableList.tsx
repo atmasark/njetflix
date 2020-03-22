@@ -32,7 +32,7 @@ export default (props: { moviesInGenre: ListElement[] }) => {
   const { moviesInGenre } = props;
   return (
     <Wrapper>
-      {moviesInGenre.map((movie: ListElement) => <Movie poster={movie.poster} />)}
+      {moviesInGenre.map((movie: ListElement) => <Movie key={movie.id} poster={movie.poster} />)}
     </Wrapper>
   );
 };
