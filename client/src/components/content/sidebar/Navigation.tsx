@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Genre } from '../../types';
+import { setActiveGenre } from '../../../state/modules/movies/thunks';
 
 const List = styled.ul`
   position: fixed;
@@ -11,11 +13,27 @@ const List = styled.ul`
 
 const ListItem = styled.li``;
 
-export default (props: { genres: Genre[] }) => {
-  const { genres } = props;
+const Navigation = (props: { genres: Genre[]; setActiveGenre: any; }) => {
+  const { genres, setActiveGenre } = props;
+  const handleOnClick = (genre: string) => {
+    setActiveGenre(genre)
+  }
   return (
     <List>
-      {genres.map((genre: Genre) => <ListItem key={genre.name}>{genre.name}</ListItem>)}
+      {genres.map((genre: Genre) => <ListItem onClick={() => handleOnClick(genre.name)} key={genre.name}>{genre.name}</ListItem>)}
     </List>
   )
 };
+
+
+const mapStateToProps = (state: any) => ({
+  activeGenre: state.movies.activeGenre
+})
+
+const mapDispatchToProps = (dispatch: any) => ({
+  setActiveGenre(genre: string) {
+    dispatch(setActiveGenre(genre))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation)
