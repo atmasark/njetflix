@@ -5,6 +5,8 @@ import {
   FETCH_CURRENT_MOVIE_REQUEST,
   FETCH_CURRENT_MOVIE_SUCCESS,
   FETCH_CURRENT_MOVIE_FAILURE,
+  SET_ACTIVE_GENRE,
+  setActiveGenreType,
   MovieState,
   FetchMovieListActionTypes,
   FetchCurrentMovieActionTypes,
@@ -22,12 +24,13 @@ const initialState = {
     data: {},
     error: null,
   },
+  activeGenre: null
 };
 
 
 export default (
   state: MovieState = initialState,
-  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes,
+  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | setActiveGenreType,
 ) => {
   switch (action.type) {
     case FETCH_MOVIE_LIST_REQUEST:
@@ -79,6 +82,11 @@ export default (
           isLoading: false,
           error: action.error,
         },
+      };
+    case SET_ACTIVE_GENRE:
+      return {
+        ...state,
+        activeGenre: action.activeGenre
       };
     default:
       return state;

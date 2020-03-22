@@ -5,6 +5,8 @@ import {
   FETCH_CURRENT_MOVIE_REQUEST,
   FETCH_CURRENT_MOVIE_SUCCESS,
   FETCH_CURRENT_MOVIE_FAILURE,
+  SET_ACTIVE_GENRE,
+  setActiveGenreType,
   FetchCurrentMovieActionTypes,
   FetchMovieListActionTypes,
   ListElement,
@@ -40,3 +42,9 @@ export const fetchCurrentMovieFailure = (error: string): FetchCurrentMovieAction
   type: FETCH_CURRENT_MOVIE_FAILURE,
   error,
 });
+
+// Action for setting a genre active
+export const setActiveGenre = (activeGenre: string): setActiveGenreType => ({
+  type: SET_ACTIVE_GENRE,
+  activeGenre
+})

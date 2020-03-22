@@ -7,6 +7,7 @@ import {
   fetchCurrentMovieRequest,
   fetchCurrentMovieFailure,
   fetchCurrentMovieSuccess,
+  setActiveGenre
 } from './actions';
 
 import { FetchMovieListActionTypes, FetchCurrentMovieActionTypes } from './types';
@@ -32,3 +33,5 @@ export const fetchCurrentMovie = (id: number) => async (
     dispatch(fetchCurrentMovieFailure(err.response.data.msg));
   }
 };
+
+export { setActiveGenre }

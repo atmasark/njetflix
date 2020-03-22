@@ -4,6 +4,13 @@ export const FETCH_MOVIE_LIST_FAILURE = 'FETCH_MOVIE_LIST_FAILURE';
 export const FETCH_CURRENT_MOVIE_REQUEST = 'FETCH_CURRENT_MOVIE_REQUEST';
 export const FETCH_CURRENT_MOVIE_SUCCESS = 'FETCH_CURRENT_MOVIE_SUCCESS';
 export const FETCH_CURRENT_MOVIE_FAILURE = 'FETCH_CURRENT_MOVIE_FAILURE';
+export const SET_ACTIVE_GENRE = 'SET_ACTIVE_GENRE';
+
+export interface setActiveGenreType {
+  type: typeof SET_ACTIVE_GENRE
+  activeGenre: string
+}
+
 
 // Typings for fetching all movies
 interface FetchMovieListRequestAction {
