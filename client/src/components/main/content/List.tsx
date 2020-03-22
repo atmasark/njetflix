@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
 
 const Wrapper = styled.div`
   margin-bottom: 80px;
@@ -49,22 +48,24 @@ const Movie = styled.div.attrs((props: any) => ({
 `;
 
 
-const List = (props: any) => (
-  <Wrapper>
-    <ListHeader>
-      <Title>Genre</Title>
-      <ShowAll>Show all</ShowAll>
-    </ListHeader>
-    <ScrollableList>
-      {props.movies.map((movie: any) => (
-        <Movie poster={movie.poster} />
-      ))}
-    </ScrollableList>
-  </Wrapper>
-);
-
-
-const mapStateToProps = (state: any) => ({
-  movies: state.movies.list.data,
-});
-export default connect(mapStateToProps)(List);
+export default (props: any) => {
+  const { genre, movies } = props;
+  const moviesInGenre = movies.filter((movie: any) => movie.genre.includes(genre.name));
+  return (
+    <Wrapper>
+      <ListHeader>
+        <Title>
+          {genre.name}
+          {' '}
+          (
+          {genre.count}
+          )
+        </Title>
+        <ShowAll>Show all</ShowAll>
+      </ListHeader>
+      <ScrollableList>
+        {moviesInGenre.map((movie: any) => <Movie poster={movie.poster} />)}
+      </ScrollableList>
+    </Wrapper>
+  );
+};
