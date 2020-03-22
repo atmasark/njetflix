@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ListElement } from '../../types';
 
 const Wrapper = styled.div`
   margin-bottom: 80px;
@@ -34,7 +35,7 @@ const ScrollableList = styled.div`
   -ms-overflow-style: none;
 `;
 
-const Movie = styled.div.attrs((props: any) => ({
+const Movie = styled.div.attrs((props: { poster: string }) => ({
   poster: props.poster,
 }))`
   flex: 0 0 auto;
@@ -48,23 +49,25 @@ const Movie = styled.div.attrs((props: any) => ({
 `;
 
 
-export default (props: any) => {
+export default (props: { genre: any; movies: ListElement[] }) => {
   const { genre, movies } = props;
-  const moviesInGenre = movies.filter((movie: any) => movie.genre.includes(genre.name));
+  let moviesInGenre;
+  if (genre === 'All') moviesInGenre = movies;
+  else moviesInGenre = movies.filter((movie: ListElement) => movie.genre.includes(genre.name));
   return (
     <Wrapper>
       <ListHeader>
         <Title>
-          {genre.name}
+          {genre.name || 'All movies'}
           {' '}
           (
-          {genre.count}
+          {genre.count || movies.length}
           )
         </Title>
         <ShowAll>Show all</ShowAll>
       </ListHeader>
       <ScrollableList>
-        {moviesInGenre.map((movie: any) => <Movie poster={movie.poster} />)}
+        {moviesInGenre.map((movie: ListElement) => <Movie poster={movie.poster} />)}
       </ScrollableList>
     </Wrapper>
   );
