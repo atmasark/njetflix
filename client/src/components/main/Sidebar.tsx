@@ -1,41 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import styled from 'styled-components';
-
+import Navigation from './sidebar/Navigation'
+import { getAllGenres } from '../../state/modules/movies/selectors';
+import { Genre, ListElement, State } from '../types';
 
 const Wrapper = styled.div`
   display: flex;
   flex: 1 1;
 `;
 
-const Container = styled.div`
-  position: fixed;
-  top: 50%;
-  transform: translate(0,-50%);
-`;
+const Sidebar = (props: { movies: ListElement[]; genres: Genre[] }) => {
+  const { movies, genres } = props;
+  if (movies) {
+    return (
+      <Wrapper>
+        <Navigation genres={genres} />
+      </Wrapper>
+    )
+  } else return <></>
+};
 
-const List = styled.ul`
-  list-style: none;
-`;
+const mapStateToProps = (state: State) => ({
+  movies: state.movies.list.data,
+  genres: getAllGenres(state),
+});
 
-const ListElement = styled.li``;
-
-export default () => (
-  <Wrapper>
-    <Container>
-      <List>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-        <ListElement>genre</ListElement>
-      </List>
-    </Container>
-  </Wrapper>
-);
+export default connect(mapStateToProps)(Sidebar);
