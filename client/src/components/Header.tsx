@@ -3,20 +3,22 @@ import styled from 'styled-components';
 import logo from '../assets/logo.png';
 
 const Wrapper = styled.div`
+  position: sticky; 
+  top: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(181,181,181,0.9) 100%);
+`;
+
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 100px;
-  padding: 0 15px;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(79,79,79,0.1) 100%);
+  padding: 5px 15px;
 `;
 
 const HeaderContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 `;
 
 const Logo = styled.div`
@@ -34,9 +36,11 @@ const Text = styled.p`
 
 export default () => (
   <Wrapper>
-    <HeaderContent>
-      <Logo />
-      <Text>Placeholder</Text>
-    </HeaderContent>
+    <Container>
+      <HeaderContent>
+        <Logo />
+        <Text>Placeholder</Text>
+      </HeaderContent>
+    </Container>
   </Wrapper>
 );
