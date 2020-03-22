@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import SectionHeader from './section/SectionHeader'
 import ScrollableList from './section/ScrollableList'
@@ -12,8 +12,19 @@ export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: stri
   const { genre, movies, activeGenre, setActiveGenre, refs } = props;
   let moviesInGenre = movies.filter((movie: ListElement) => movie.genre.includes(genre.name));
 
-  const pageHeight = window.innerHeight
-  const observerMargin = Math.floor(pageHeight / 2);
+  const [pageHeight, setPageHeight] = useState<number>(window.innerHeight);
+
+  useEffect(() => {
+    setPageHeight(window.innerHeight);
+    window.addEventListener('resize', (e) => {
+      setTimeout(() => {
+        setPageHeight(window.innerHeight);
+      }, 300);
+    });
+  }, []);
+
+
+  let observerMargin = Math.floor(pageHeight / 2);
   useEffect(() => {
     const options = {
       rootMargin: `-${
@@ -30,8 +41,8 @@ export default (props: { genre: Genre; movies: ListElement[]; activeGenre?: stri
     };
     const observer = new IntersectionObserver(intersectionCallback, options);
     observer.observe(refs[genre.name].current);
-    () => observer.disconnect();
-  }, [activeGenre]);
+    return () => observer.disconnect();
+  }, [activeGenre, pageHeight]);
 
 
   return (
