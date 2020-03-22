@@ -42,7 +42,7 @@ const Movie = styled.div.attrs((props: { poster: string }) => ({
   min-height: 300px;
   width: 200px;
   margin-right: 20px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(${(props) => props.poster});
