@@ -16,13 +16,16 @@ const List = styled.ul`
 `;
 
 const bringForwards = keyframes`
-  from {
+ 0% {
     padding: 5px 0 5px 15px;
   }
-  to {
-    padding: 5px 0 5px 30px;
+  25% {
+    padding: 5px 0 5px 18.75px;
   }
-`
+  100% {
+    padding: 12px 0 12px 30px;
+  }
+`;
 
 const ListItem = styled.li.attrs((props: { isActive: boolean }) => ({
   isActive: props.isActive,
@@ -30,9 +33,8 @@ const ListItem = styled.li.attrs((props: { isActive: boolean }) => ({
   background: ${(props) => props.isActive && 'linear-gradient(90deg, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0) 100%)'};
   font-size: 20px;
   padding: 5px 0 5px 15px;
-  animation: ${(p: { isActive: boolean }) =>
-    p.isActive && bringForwards}
-    ease-out 0.25s forwards;
+  animation: ${(p: { isActive: boolean }) => p.isActive && bringForwards}
+    ease-out 0.75s forwards;
 `;
 
 export default (props: { genres: Genre[]; activeGenre: string | null; handleClick: (genre: string) => void; }) => {
@@ -40,15 +42,16 @@ export default (props: { genres: Genre[]; activeGenre: string | null; handleClic
   return (
     <Wrapper>
       <List>
-        {genres.map((genre: Genre) =>
+        {genres.map((genre: Genre) => (
           <ListItem
             isActive={genre.name === activeGenre}
             onClick={() => handleClick(genre.name)}
-            key={genre.name}>
+            key={genre.name}
+          >
             {genre.name}
-          </ListItem>)}
+          </ListItem>
+        ))}
       </List>
     </Wrapper>
-  )
+  );
 };
-
