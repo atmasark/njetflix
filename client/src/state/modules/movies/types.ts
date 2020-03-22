@@ -45,7 +45,9 @@ export type FetchCurrentMovieActionTypes =
   | FetchCurrentMovieSuccessAction
   | FetchCurrentMovieFailureAction
 
-
+export interface State {
+  movies: MovieState
+}
 // Typings for state
 export interface MovieState {
   list: ListState,
@@ -61,6 +63,7 @@ interface ListState {
 export interface ListElement {
   id: number,
   title: string,
+  genre: string[],
   poster: string
 }
 
@@ -75,10 +78,15 @@ export interface Movie {
   title: string
   year: string
   rated: string
-  genre: string
+  genre: string[]
   director: string
   actors: string
   plot: string
   poster: string
   imdbRating: string
+}
+
+export interface Genre {
+  name: string
+  count: number
 }
