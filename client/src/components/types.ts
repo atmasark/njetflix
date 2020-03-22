@@ -5,6 +5,7 @@ export interface State {
 export interface MovieState {
   list: ListState,
   current: CurrentMovieState
+  activeGenre: string | null
 }
 
 interface ListState {
