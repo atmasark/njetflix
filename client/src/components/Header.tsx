@@ -24,8 +24,10 @@ const HeaderContent = styled.div`
 `;
 
 const Logo = styled.div`
-  min-width: 70px;
-  max-width: 200px;
+  min-width: 200px;
+  @media only screen and (max-width: 480px) {
+    min-width: 70px;
+  }
   margin-right: 25px;
   background-size: contain;
   background-repeat: no-repeat;
