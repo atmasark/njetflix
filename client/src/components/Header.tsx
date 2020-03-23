@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
 
@@ -6,6 +7,7 @@ const Wrapper = styled.div`
   position: sticky; 
   top: 0;
   background: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(181,181,181,0.9) 100%);
+  z-index: 2;
 `;
 
 const Container = styled.div`
@@ -30,8 +32,12 @@ const Logo = styled.div`
   background-image: url(${logo});
 `;
 
-const Text = styled.p`
+const StyledLink = styled(Link)`
   align-self: center;
+  text-decoration: none;
+  margin: 18px 20px;
+  color: #303030;
+  font-size: 20px;
 `;
 
 export default () => (
@@ -39,7 +45,8 @@ export default () => (
     <Container>
       <HeaderContent>
         <Logo />
-        <Text>Placeholder</Text>
+        <StyledLink to="/all">All movies</StyledLink>
+        <StyledLink to="/">By genre</StyledLink>
       </HeaderContent>
     </Container>
   </Wrapper>
