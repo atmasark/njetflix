@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import List from './genres/List';
 import Sidebar from './genres/Sidebar';
 import { Genre, ListElement, State } from './types';
-import { setActiveGenre } from '../state/modules/movies/thunks';
+import { setActiveGenre, fetchCurrentMovie } from '../state/modules/movies/thunks';
 import { getAllGenres } from '../state/modules/movies/selectors';
 
 const Wrapper = styled.div`
@@ -16,9 +16,14 @@ const Genres = (props: {
   genres: Genre[];
   activeGenre: string | null;
   setActiveGenre: (genre: string) => void;
+  fetchCurrentMovie: (id: number) => void;
 }) => {
   const {
-    movies, genres, activeGenre, setActiveGenre,
+    movies,
+    genres,
+    activeGenre,
+    setActiveGenre,
+    fetchCurrentMovie,
   } = props;
   const refs = genres.reduce((refsObj, genre) => {
     // @ts-ignore
@@ -47,6 +52,7 @@ const Genres = (props: {
             genres={genres}
             activeGenre={activeGenre}
             setActiveGenre={setActiveGenre}
+            fetchCurrentMovie={fetchCurrentMovie}
             refs={refs}
           />
         </>
@@ -64,6 +70,9 @@ const mapStateToProps = (state: State) => ({
 const mapDispatchToProps = (dispatch: any) => ({
   setActiveGenre(genre: string) {
     dispatch(setActiveGenre(genre));
+  },
+  fetchCurrentMovie(id: number) {
+    dispatch(fetchCurrentMovie(id));
   },
 });
 

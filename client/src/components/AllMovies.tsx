@@ -37,7 +37,7 @@ const AllMovies = ({ history, ...props }:
 
   const handleClick = (id: number) => {
     fetchCurrentMovie(id);
-    // history.push('/');
+    history.push(`/movie/${id}`);
   };
 
   return (
