@@ -54,10 +54,9 @@ const AllMovies = ({ history, ...props }:
       <Controllers />
       <MovieList>
         {movies.map((movie: ListElement) => (
-          <MovieContainer>
+          <MovieContainer key={movie.id}>
             <Movie
               onClick={() => handleClick(movie.id)}
-              key={movie.id}
               poster={movie.poster}
             />
           </MovieContainer>

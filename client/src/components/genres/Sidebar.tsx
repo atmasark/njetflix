@@ -53,11 +53,10 @@ export default (props: {
     <Wrapper>
       <List>
         {genres.map((genre: Genre) => (
-          <ListItemContainer>
+          <ListItemContainer key={genre.name}>
             <ListItem
               isActive={genre.name === activeGenre}
               onClick={() => handleClick(genre.name)}
-              key={genre.name}
             >
               {genre.name}
             </ListItem>

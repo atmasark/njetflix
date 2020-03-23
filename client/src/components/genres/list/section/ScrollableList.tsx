@@ -50,9 +50,8 @@ const ScrollableList = ({ history, ...props }:
   return (
     <Wrapper>
       {moviesInGenre.map((movie: ListElement) => (
-        <MovieContainer>
+        <MovieContainer key={movie.id}>
           <Movie
-            key={movie.id}
             onClick={() => handleClick(movie.id)}
             poster={movie.poster}
           />
