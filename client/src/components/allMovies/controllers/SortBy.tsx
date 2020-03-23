@@ -9,16 +9,24 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
 `;
 
-const Title = styled.p``;
+const Title = styled.p`
+  font-size: 16px;
+`;
+
+const OptionContainer = styled.div``;
 
 const Option = styled.p.attrs((props: { id: string; sortBy: string; }) => ({
   id: props.id,
   sortBy: props.sortBy,
 }))`
+  font-size: 16px;
   &::before {
     content: '▼';
     margin: 0 10px;
     visibility: ${(p: { id: string; sortBy: string; }) => (p.id !== p.sortBy) && 'hidden'};
+  }
+  ${OptionContainer}:hover & {
+    cursor: pointer;    
   }
 `;
 
@@ -30,9 +38,9 @@ const SortBy = (props: { sortBy: string; setMoviesSortBy: (type: string) => void
   return (
     <Wrapper>
       <Title>Sort by: </Title>
-      <Option id="AZ" sortBy={sortBy} onClick={() => handleClick('AZ')}>A-Z</Option>
-      <Option id="IMDB_RATING" sortBy={sortBy} onClick={() => handleClick('IMDB_RATING')}>Rating</Option>
-      <Option id="YEAR" sortBy={sortBy} onClick={() => handleClick('YEAR')}>Year</Option>
+      <OptionContainer><Option id="AZ" sortBy={sortBy} onClick={() => handleClick('AZ')}>A-Z</Option></OptionContainer>
+      <OptionContainer><Option id="IMDB_RATING" sortBy={sortBy} onClick={() => handleClick('IMDB_RATING')}>Rating</Option></OptionContainer>
+      <OptionContainer><Option id="YEAR" sortBy={sortBy} onClick={() => handleClick('YEAR')}>Year</Option></OptionContainer>
     </Wrapper>
   );
 };

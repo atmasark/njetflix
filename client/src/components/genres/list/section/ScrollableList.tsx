@@ -32,6 +32,7 @@ const Movie = styled.div.attrs((props: { poster: string }) => ({
   transition: transform .2s;
   ${MovieContainer}:hover & {
     transform: scale(1.05);
+    cursor: pointer;
   }
 `;
 

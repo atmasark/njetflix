@@ -4,7 +4,13 @@ import styled from 'styled-components';
 import { setFamilyFilter } from '../../../state/modules/movies/thunks';
 import { State } from '../../types';
 
-const Option = styled.p``;
+const OptionContainer = styled.div``;
+const Option = styled.p`
+  font-size: 16px;
+  ${OptionContainer}:hover & {
+    cursor: pointer;    
+  }
+`;
 
 const Filter = (props: {
   familyFilter: boolean;
@@ -16,13 +22,14 @@ const Filter = (props: {
     setFamilyFilter(!familyFilter);
   };
   return (
-    <>
+    <OptionContainer>
+
       <Option onClick={() => handleClick(familyFilter)}>
         Turn family-friendly mode
         {' '}
         {familyFilter ? 'OFF' : 'ON'}
       </Option>
-    </>
+    </OptionContainer>
   );
 };
 
