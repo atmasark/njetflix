@@ -21,14 +21,14 @@ const App = ({ dispatch }: any) => {
     <Router>
       <Header />
       <Switch>
-        <Route path="/genres">
-          <Genres />
+        <Route path="/all">
+          <AllMovies />
         </Route>
         <Route exact path="/movie/:id">
           <SingleMovie />
         </Route>
         <Route path="/">
-          <AllMovies />
+          <Genres />
         </Route>
       </Switch>
     </Router>
