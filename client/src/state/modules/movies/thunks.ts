@@ -7,7 +7,9 @@ import {
   fetchCurrentMovieRequest,
   fetchCurrentMovieFailure,
   fetchCurrentMovieSuccess,
-  setActiveGenre
+  setActiveGenre,
+  setFamilyFilter,
+  setMoviesSortBy,
 } from './actions';
 
 import { FetchMovieListActionTypes, FetchCurrentMovieActionTypes } from './types';
@@ -34,4 +36,8 @@ export const fetchCurrentMovie = (id: number) => async (
   }
 };
 
-export { setActiveGenre }
+export {
+  setActiveGenre,
+  setFamilyFilter,
+  setMoviesSortBy,
+};

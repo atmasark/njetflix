@@ -5,12 +5,15 @@ import {
   FETCH_CURRENT_MOVIE_REQUEST,
   FETCH_CURRENT_MOVIE_SUCCESS,
   FETCH_CURRENT_MOVIE_FAILURE,
-  SET_ACTIVE_GENRE,
-  SetActiveGenreType,
   FetchCurrentMovieActionTypes,
   FetchMovieListActionTypes,
   ListElement,
   Movie,
+  SET_ACTIVE_GENRE,
+  SetActiveGenreType,
+  SET_FAMILY_FILTER,
+  SET_MOVIES_SORT_BY,
+  SetMoviesSortFilterTypes,
 } from './types';
 
 // Actions for fetching movie list
@@ -46,5 +49,16 @@ export const fetchCurrentMovieFailure = (error: string): FetchCurrentMovieAction
 // Action for setting a genre active
 export const setActiveGenre = (activeGenre: string): SetActiveGenreType => ({
   type: SET_ACTIVE_GENRE,
-  activeGenre
-})
+  activeGenre,
+});
+
+// Actions for setting a family filter and sorting for movie list
+export const setFamilyFilter = (familyFilter: boolean): SetMoviesSortFilterTypes => ({
+  type: SET_FAMILY_FILTER,
+  familyFilter,
+});
+
+export const setMoviesSortBy = (sortBy: string): SetMoviesSortFilterTypes => ({
+  type: SET_MOVIES_SORT_BY,
+  sortBy,
+});
