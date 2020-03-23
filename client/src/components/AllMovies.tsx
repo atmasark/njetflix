@@ -12,7 +12,9 @@ const Wrapper = styled.div`
   padding: 100px 50px;
 `;
 
-const Movie = styled.div.attrs((props: { poster: string }) => ({
+const MovieContainer = styled.div``;
+
+const Movie = styled.div.attrs((props: { poster: string; }) => ({
   poster: props.poster,
 }))`
   min-height: 450px;
@@ -22,6 +24,10 @@ const Movie = styled.div.attrs((props: { poster: string }) => ({
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(${(props) => props.poster});
+  transition: transform .2s;
+  ${MovieContainer}:hover & {
+    transform: scale(1.05);
+  }
 `;
 
 const AllMovies = ({ history, ...props }:
@@ -43,11 +49,13 @@ const AllMovies = ({ history, ...props }:
   return (
     <Wrapper>
       {movies.map((movie: ListElement) => (
-        <Movie
-          onClick={() => handleClick(movie.id)}
-          key={movie.id}
-          poster={movie.poster}
-        />
+        <MovieContainer>
+          <Movie
+            onClick={() => handleClick(movie.id)}
+            key={movie.id}
+            poster={movie.poster}
+          />
+        </MovieContainer>
       ))}
     </Wrapper>
   );

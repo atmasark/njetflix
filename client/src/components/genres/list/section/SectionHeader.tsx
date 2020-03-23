@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
 const Title = styled.p`
   font-size: 26px;
-  margin: 0;
+  margin: 0 0 0 10px;
 `;
 
 

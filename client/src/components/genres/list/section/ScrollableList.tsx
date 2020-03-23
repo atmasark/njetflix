@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding: 20px 0px;
   -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     display: none;
@@ -15,17 +16,23 @@ const Wrapper = styled.div`
   -ms-overflow-style: none;
 `;
 
+const MovieContainer = styled.div``;
+
 const Movie = styled.div.attrs((props: { poster: string }) => ({
   poster: props.poster,
 }))`
   flex: 0 0 auto;
   min-height: 300px;
   width: 200px;
-  margin-right: 20px;
+  margin: 0px 10px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(${(props) => props.poster});
+  transition: transform .2s;
+  ${MovieContainer}:hover & {
+    transform: scale(1.05);
+  }
 `;
 
 const ScrollableList = ({ history, ...props }:
@@ -42,7 +49,15 @@ const ScrollableList = ({ history, ...props }:
   };
   return (
     <Wrapper>
-      {moviesInGenre.map((movie: ListElement) => <Movie key={movie.id} onClick={() => handleClick(movie.id)} poster={movie.poster} />)}
+      {moviesInGenre.map((movie: ListElement) => (
+        <MovieContainer>
+          <Movie
+            key={movie.id}
+            onClick={() => handleClick(movie.id)}
+            poster={movie.poster}
+          />
+        </MovieContainer>
+      ))}
     </Wrapper>
   );
 };
