@@ -15,6 +15,9 @@ const List = styled.ul`
   padding-left: 0;
 `;
 
+const ListItemContainer = styled.div`
+`;
+
 const bringForwards = keyframes`
  0% {
     padding: 5px 0 5px 15px;
@@ -35,21 +38,30 @@ const ListItem = styled.li.attrs((props: { isActive: boolean }) => ({
   padding: 5px 0 5px 15px;
   animation: ${(p: { isActive: boolean }) => p.isActive && bringForwards}
     ease-out 0.75s forwards;
+  ${ListItemContainer}:hover & {
+    cursor: pointer;    
+  }
 `;
 
-export default (props: { genres: Genre[]; activeGenre: string | null; handleClick: (genre: string) => void; }) => {
+export default (props: {
+  genres: Genre[];
+  activeGenre: string | null;
+  handleClick: (genre: string) => void;
+}) => {
   const { genres, activeGenre, handleClick } = props;
   return (
     <Wrapper>
       <List>
         {genres.map((genre: Genre) => (
-          <ListItem
-            isActive={genre.name === activeGenre}
-            onClick={() => handleClick(genre.name)}
-            key={genre.name}
-          >
-            {genre.name}
-          </ListItem>
+          <ListItemContainer>
+            <ListItem
+              isActive={genre.name === activeGenre}
+              onClick={() => handleClick(genre.name)}
+              key={genre.name}
+            >
+              {genre.name}
+            </ListItem>
+          </ListItemContainer>
         ))}
       </List>
     </Wrapper>
