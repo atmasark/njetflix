@@ -9,7 +9,7 @@ const movieRouter = Router();
 // @access  Public
 movieRouter.get('/getAll', (req, res) => {
   // Filter only some of the keys for the list
-  const keysForList = ['id', 'title', 'poster', 'genre'];
+  const keysForList = ['id', 'title', 'poster', 'genre', 'imdbRating', 'year', 'rated'];
   try {
     const listData = movieData.map((movie: Movie) => Object.keys(movie)
       .filter((key) => keysForList.includes(key))

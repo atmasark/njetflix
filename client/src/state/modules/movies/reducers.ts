@@ -10,7 +10,9 @@ import {
   MovieState,
   FetchMovieListActionTypes,
   FetchCurrentMovieActionTypes,
-
+  SET_FAMILY_FILTER,
+  SET_MOVIES_SORT_BY,
+  SetMoviesSortFilterTypes,
 } from './types';
 
 const initialState = {
@@ -18,19 +20,21 @@ const initialState = {
     isLoading: false,
     data: [],
     error: null,
+    familyFilter: false,
+    sortBy: '',
   },
   current: {
     isLoading: false,
     data: {},
     error: null,
   },
-  activeGenre: null
+  activeGenre: null,
 };
 
 
 export default (
   state: MovieState = initialState,
-  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | SetActiveGenreType,
+  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | SetActiveGenreType | SetMoviesSortFilterTypes,
 ) => {
   switch (action.type) {
     case FETCH_MOVIE_LIST_REQUEST:
@@ -86,7 +90,23 @@ export default (
     case SET_ACTIVE_GENRE:
       return {
         ...state,
-        activeGenre: action.activeGenre
+        activeGenre: action.activeGenre,
+      };
+    case SET_FAMILY_FILTER:
+      return {
+        ...state,
+        list: {
+          ...state.list,
+          familyFilter: action.familyFilter,
+        },
+      };
+    case SET_MOVIES_SORT_BY:
+      return {
+        ...state,
+        list: {
+          ...state.list,
+          sortBy: action.sortBy,
+        },
       };
     default:
       return state;

@@ -2,10 +2,13 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import Controllers from './allMovies/Controllers';
 import { ListElement, State } from './types';
 import { fetchCurrentMovie } from '../state/modules/movies/thunks';
+import { getFamilyFilteredMovies } from '../state/modules/movies/selectors';
 
-const Wrapper = styled.div`
+
+const MovieList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
@@ -47,22 +50,25 @@ const AllMovies = ({ history, ...props }:
   };
 
   return (
-    <Wrapper>
-      {movies.map((movie: ListElement) => (
-        <MovieContainer>
-          <Movie
-            onClick={() => handleClick(movie.id)}
-            key={movie.id}
-            poster={movie.poster}
-          />
-        </MovieContainer>
-      ))}
-    </Wrapper>
+    <>
+      <Controllers />
+      <MovieList>
+        {movies.map((movie: ListElement) => (
+          <MovieContainer>
+            <Movie
+              onClick={() => handleClick(movie.id)}
+              key={movie.id}
+              poster={movie.poster}
+            />
+          </MovieContainer>
+        ))}
+      </MovieList>
+    </>
   );
 };
 
 const mapStateToProps = (state: State) => ({
-  movies: state.movies.list.data,
+  movies: getFamilyFilteredMovies(state),
 });
 
 const mapDispatchToProps = (dispatch: any) => ({

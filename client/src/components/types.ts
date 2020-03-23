@@ -12,6 +12,8 @@ interface ListState {
   isLoading: boolean
   data: ListElement[]
   error?: string | null
+  familyFilter: boolean,
+  sortBy: string,
 }
 
 export interface ListElement {
@@ -19,6 +21,9 @@ export interface ListElement {
   title: string,
   genre: string[],
   poster: string
+  imdbRating: string
+  year: string
+  rated: string
 }
 
 interface CurrentMovieState {
