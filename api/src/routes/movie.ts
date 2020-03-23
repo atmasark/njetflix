@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import movieData from '../utils/convertData';
 import Movie from '../interfaces/movie';
+import validateQuery from '../validations/validateQuery';
 
 const movieRouter = Router();
 
@@ -34,19 +35,19 @@ movieRouter.get('/getAll', (req, res) => {
 // @desc    Get data of a movie
 // @access  Public
 movieRouter.get('/getSingle', (req, res) => {
-  const { id } = req.query;
+  const { error, isValid } = validateQuery(req.query.id);
+  if (!isValid) {
+    return res.status(400).json({
+      success: false,
+      msg: error,
+    });
+  }
   try {
-    if (!id) {
-      return res.status(400).json({
-        success: false,
-        msg: 'Id is required',
-      });
-    }
-    const queriedMovie = movieData.find((asd: Movie) => asd.id === parseInt(id));
+    const queriedMovie = movieData.find((movie: Movie) => movie.id === Number(req.query.id));
     if (!queriedMovie) {
       return res.status(404).json({
         success: false,
-        msg: 'Incorrect id',
+        msg: 'Id does not exist',
       });
     }
     return res.status(200).json({
