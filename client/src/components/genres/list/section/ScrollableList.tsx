@@ -22,8 +22,9 @@ const Movie = styled.div.attrs((props: { poster: string }) => ({
   poster: props.poster,
 }))`
   flex: 0 0 auto;
-  min-height: 300px;
-  width: 200px;
+  height: 450px;
+  max-width: 300px;
+  min-width: 300px;
   margin: 0px 10px;
   background-size: cover;
   background-repeat: no-repeat;

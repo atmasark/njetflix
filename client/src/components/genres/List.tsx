@@ -6,7 +6,13 @@ import { Genre, ListElement } from '../types';
 const Wrapper = styled.div`
   flex: 2.1 1;
   width: 75%;
-  padding: 250px 0px;
+  padding: 100px 0 0 0;
+  @media only screen and (min-width: 1600px) {
+    padding: 250px 0 0 0;
+  }
+  &:last-child {
+   margin-bottom: 200px;
+  }
 `;
 
 export default (props: {

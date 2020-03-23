@@ -7,6 +7,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 30px;
+  @media only screen and (max-width: 756px) {
+    padding: 0px 10px;
+  }
 `;
 
 const Plot = styled.p`

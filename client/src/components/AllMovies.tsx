@@ -11,6 +11,12 @@ import { getFamilyFilteredMovies } from '../state/modules/movies/selectors';
 const MovieList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media only screen and (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
   grid-gap: 1em;
   padding: 100px 50px;
 `;
@@ -20,9 +26,9 @@ const MovieContainer = styled.div``;
 const Movie = styled.div.attrs((props: { poster: string; }) => ({
   poster: props.poster,
 }))`
-  min-height: 450px;
-  min-width: 300px;
-  margin: 0px 10px;
+  height: 450px;
+  max-width: 300px;
+  margin: 0px auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,6 +36,7 @@ const Movie = styled.div.attrs((props: { poster: string; }) => ({
   transition: transform .2s;
   ${MovieContainer}:hover & {
     transform: scale(1.05);
+    cursor: pointer;
   }
 `;
 

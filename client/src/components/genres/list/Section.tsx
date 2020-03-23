@@ -5,7 +5,7 @@ import ScrollableList from './section/ScrollableList';
 import { ListElement, Genre } from '../../types';
 
 const Wrapper = styled.div`
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 `;
 
 export default (props: {

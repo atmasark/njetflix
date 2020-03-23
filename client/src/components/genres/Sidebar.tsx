@@ -5,6 +5,9 @@ import { Genre } from '../types';
 const Wrapper = styled.div`
   display: flex;
   flex: 1 1;
+  @media only screen and (max-width: 550px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`

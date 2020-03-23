@@ -24,8 +24,9 @@ const HeaderContent = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 200px;
-  margin-right: 50px;
+  min-width: 70px;
+  max-width: 200px;
+  margin-right: 25px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
