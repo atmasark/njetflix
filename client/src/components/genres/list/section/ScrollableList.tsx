@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ListElement } from '../../../types';
 
@@ -27,12 +28,24 @@ const Movie = styled.div.attrs((props: { poster: string }) => ({
   background-image: url(${(props) => props.poster});
 `;
 
+const ScrollableList = ({ history, ...props }:
+  {
+    history: any;
+    moviesInGenre: ListElement[];
+    fetchCurrentMovie: (id: number) => void;
+  }) => {
+  const { moviesInGenre, fetchCurrentMovie } = props;
 
-export default (props: { moviesInGenre: ListElement[] }) => {
-  const { moviesInGenre } = props;
+  const handleClick = (id: number) => {
+    fetchCurrentMovie(id);
+    history.push(`/movie/${id}`);
+  };
   return (
     <Wrapper>
-      {moviesInGenre.map((movie: ListElement) => <Movie key={movie.id} poster={movie.poster} />)}
+      {moviesInGenre.map((movie: ListElement) => <Movie key={movie.id} onClick={() => handleClick(movie.id)} poster={movie.poster} />)}
     </Wrapper>
   );
 };
+
+// @ts-ignore
+export default withRouter(ScrollableList);

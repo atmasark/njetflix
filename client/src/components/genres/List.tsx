@@ -14,10 +14,16 @@ export default (props: {
   genres: Genre[];
   activeGenre: string | null;
   setActiveGenre: (genre: string) => void;
+  fetchCurrentMovie: (id: number) => void;
   refs: any;
 }) => {
   const {
-    movies, genres, activeGenre, setActiveGenre, refs,
+    movies,
+    genres,
+    activeGenre,
+    setActiveGenre,
+    fetchCurrentMovie,
+    refs,
   } = props;
 
   return (
@@ -29,6 +35,7 @@ export default (props: {
           movies={movies}
           activeGenre={activeGenre}
           setActiveGenre={setActiveGenre}
+          fetchCurrentMovie={fetchCurrentMovie}
           refs={refs}
         />
       ))}

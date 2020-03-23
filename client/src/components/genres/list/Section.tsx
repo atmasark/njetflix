@@ -13,10 +13,16 @@ export default (props: {
   movies: ListElement[];
   activeGenre?: string | null;
   setActiveGenre?: (genre: string) => void;
+  fetchCurrentMovie: (id: number) => void;
   refs: any;
 }) => {
   const {
-    genre, movies, activeGenre, setActiveGenre, refs,
+    genre,
+    movies,
+    activeGenre,
+    setActiveGenre,
+    fetchCurrentMovie,
+    refs,
   } = props;
   const moviesInGenre = movies.filter((movie: ListElement) => movie.genre.includes(genre.name));
 
@@ -61,6 +67,7 @@ export default (props: {
       />
       <ScrollableList
         moviesInGenre={moviesInGenre}
+        fetchCurrentMovie={fetchCurrentMovie}
       />
     </Wrapper>
   );
