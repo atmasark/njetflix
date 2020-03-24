@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Controllers from './allMovies/Controllers';
 import { ListElement, State } from './types';
 import { fetchCurrentMovie } from '../state/modules/movies/thunks';
-import { getFamilyFilteredMovies } from '../state/modules/movies/selectors';
+import { getTitleFilteredMovies } from '../state/modules/movies/selectors';
 
 
 const MovieList = styled.div`
@@ -74,7 +74,7 @@ const AllMovies = ({ history, ...props }:
 };
 
 const mapStateToProps = (state: State) => ({
-  movies: getFamilyFilteredMovies(state),
+  movies: getTitleFilteredMovies(state),
 });
 
 const mapDispatchToProps = (dispatch: any) => ({

@@ -7,6 +7,12 @@ export const FETCH_CURRENT_MOVIE_FAILURE = 'FETCH_CURRENT_MOVIE_FAILURE';
 export const SET_ACTIVE_GENRE = 'SET_ACTIVE_GENRE';
 export const SET_MOVIES_SORT_BY = 'SET_MOVIES_SORT_BY';
 export const SET_FAMILY_FILTER = 'SET_FAMILY_FILTER';
+export const SET_TITLE_FILTER = 'SET_TITLE_FILTER';
+
+export interface SetTitleFilterType {
+  type: typeof SET_TITLE_FILTER
+  titleFilter: string
+}
 
 // Typings for 'set active genre'
 export interface SetActiveGenreType {
@@ -87,6 +93,7 @@ interface ListState {
   error?: string | null
   familyFilter: boolean,
   sortBy: string,
+  titleFilter?: string
 }
 
 export interface ListElement {

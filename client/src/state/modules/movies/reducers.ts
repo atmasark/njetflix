@@ -13,6 +13,8 @@ import {
   SET_FAMILY_FILTER,
   SET_MOVIES_SORT_BY,
   SetMoviesSortFilterTypes,
+  SetTitleFilterType,
+  SET_TITLE_FILTER,
 } from './types';
 
 const initialState = {
@@ -22,6 +24,7 @@ const initialState = {
     error: null,
     familyFilter: false,
     sortBy: '',
+    titleFilter: '',
   },
   current: {
     isLoading: false,
@@ -34,7 +37,7 @@ const initialState = {
 
 export default (
   state: MovieState = initialState,
-  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | SetActiveGenreType | SetMoviesSortFilterTypes,
+  action: FetchMovieListActionTypes | FetchCurrentMovieActionTypes | SetActiveGenreType | SetMoviesSortFilterTypes | SetTitleFilterType,
 ) => {
   switch (action.type) {
     case FETCH_MOVIE_LIST_REQUEST:
@@ -106,6 +109,14 @@ export default (
         list: {
           ...state.list,
           sortBy: action.sortBy,
+        },
+      };
+    case SET_TITLE_FILTER:
+      return {
+        ...state,
+        list: {
+          ...state.list,
+          titleFilter: action.titleFilter,
         },
       };
     default:

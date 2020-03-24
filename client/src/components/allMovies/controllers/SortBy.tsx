@@ -6,7 +6,9 @@ import { State } from '../../types';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  @media only screen and (min-width: 800px) {
+    justify-content: space-evenly;
+  }
 `;
 
 const Title = styled.p`

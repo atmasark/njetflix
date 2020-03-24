@@ -14,6 +14,8 @@ import {
   SET_FAMILY_FILTER,
   SET_MOVIES_SORT_BY,
   SetMoviesSortFilterTypes,
+  SET_TITLE_FILTER,
+  SetTitleFilterType,
 } from './types';
 
 // Actions for fetching movie list
@@ -61,4 +63,9 @@ export const setFamilyFilter = (familyFilter: boolean): SetMoviesSortFilterTypes
 export const setMoviesSortBy = (sortBy: string): SetMoviesSortFilterTypes => ({
   type: SET_MOVIES_SORT_BY,
   sortBy,
+});
+
+export const setTitleFilter = (titleFilter: string): SetTitleFilterType => ({
+  type: SET_TITLE_FILTER,
+  titleFilter,
 });
