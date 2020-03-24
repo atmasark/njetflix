@@ -4,6 +4,15 @@ import styled from 'styled-components';
 import { setFamilyFilter, setTitleFilter } from '../../../state/modules/movies/thunks';
 import { State } from '../../types';
 
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media only screen and (min-width: 800px) {
+    justify-content: space-evenly;
+  }
+`;
+
 const FamilyFilterContainer = styled.div``;
 const FamilyFilter = styled.p`
   font-size: 16px;
@@ -14,12 +23,15 @@ const FamilyFilter = styled.p`
 
 const TitleFilter = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const TitleInput = styled.input`
   border: 2px solid #a9a9a9;
   border-radius: 2px;
   font-size: 16px;
+  margin-right: 10px;
+  height: 25px;
 `;
 
 const Filters = (props: {
@@ -40,7 +52,7 @@ const Filters = (props: {
     setTitleFilter(keyword);
   };
   return (
-    <>
+    <Wrapper>
       <TitleFilter>
         <TitleInput placeholder="🔍 Search" value={titleFilter} onChange={(e) => handleKeyPress(e.target.value)} />
       </TitleFilter>
@@ -51,7 +63,7 @@ const Filters = (props: {
           {familyFilter ? 'OFF' : 'ON'}
         </FamilyFilter>
       </FamilyFilterContainer>
-    </>
+    </Wrapper>
   );
 };
 
