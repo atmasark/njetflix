@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Filter from './controllers/Filter';
+import Filters from './controllers/Filters';
 import SortBy from './controllers/SortBy';
 
 
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 export default () => (
   <Wrapper>
-    <Filter />
+    <Filters />
     <SortBy />
   </Wrapper>
 );
