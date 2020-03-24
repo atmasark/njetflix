@@ -10,6 +10,7 @@ import {
   setActiveGenre,
   setFamilyFilter,
   setMoviesSortBy,
+  setTitleFilter,
 } from './actions';
 
 import { FetchMovieListActionTypes, FetchCurrentMovieActionTypes } from './types';
@@ -40,4 +41,5 @@ export {
   setActiveGenre,
   setFamilyFilter,
   setMoviesSortBy,
+  setTitleFilter,
 };
