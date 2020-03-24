@@ -14,6 +14,7 @@ interface ListState {
   error?: string | null
   familyFilter: boolean,
   sortBy: string,
+  titleFilter?: string
 }
 
 export interface ListElement {
