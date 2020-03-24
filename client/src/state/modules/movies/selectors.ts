@@ -5,6 +5,7 @@ const moviesSelector = (state: State) => state.movies.list.data;
 
 export const movieSortingSelector = (state: State) => state.movies.list.sortBy;
 export const familyFilterSelector = (state: State) => state.movies.list.familyFilter;
+export const titleFilterSelector = (state: State) => state.movies.list.titleFilter;
 
 
 export const getSortedMovies = createSelector(
@@ -41,6 +42,13 @@ export const getFamilyFilteredMovies = createSelector(
   },
 );
 
+export const getTitleFilteredMovies = createSelector(
+  [titleFilterSelector, getFamilyFilteredMovies],
+  (titleFilter, movies) => {
+    if (!titleFilter) return movies;
+    return movies.filter((movie) => movie.title.includes(titleFilter));
+  },
+);
 
 export const getAllGenres = createSelector(
   [moviesSelector],
