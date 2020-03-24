@@ -46,7 +46,7 @@ export const getTitleFilteredMovies = createSelector(
   [titleFilterSelector, getFamilyFilteredMovies],
   (titleFilter, movies) => {
     if (!titleFilter) return movies;
-    return movies.filter((movie) => movie.title.includes(titleFilter));
+    return movies.filter((movie) => movie.title.toLowerCase().includes(titleFilter.toLowerCase()));
   },
 );
 
