@@ -1,38 +1,57 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { useEffect } from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-import { fetchMovieList } from './state/modules/movies';
+  createBrowserRouter, Outlet, RouterProvider, ScrollRestoration,
+} from 'react-router';
+import styled from 'styled-components';
 import Header from './components/Header';
-import Genres from './components/Genres';
-import AllMovies from './components/AllMovies';
-import SingleMovie from './components/SingleMovie';
+import AllMovies from './pages/AllMovies';
+import Home from './pages/Home';
+import MovieDetails from './pages/MovieDetails';
+import NotFound from './pages/NotFound';
+import { fetchMovieList } from './state/moviesSlice';
+import { useAppDispatch } from './state/store';
+import GlobalStyle from './styles/GlobalStyle';
 
-import './index.scss';
+const Footer = styled.footer`
+  padding: 32px var(--gutter);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+`;
 
-const App = ({ dispatch }: any) => {
+function Layout() {
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(fetchMovieList());
-  }, []);
-  return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route path="/all">
-          <AllMovies />
-        </Route>
-        <Route exact path="/movie/:id">
-          <SingleMovie />
-        </Route>
-        <Route path="/">
-          <Genres />
-        </Route>
-      </Switch>
-    </Router>
-  );
-};
+  }, [dispatch]);
 
-export default connect()(App);
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer>🍿 This isn&apos;t Netflix. No actual internjet required.</Footer>
+      <ScrollRestoration />
+    </>
+  );
+}
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'all', element: <AllMovies /> },
+      { path: 'movie/:id', element: <MovieDetails /> },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
