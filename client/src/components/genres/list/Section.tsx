@@ -41,9 +41,9 @@ export default (props: {
   const observerMargin = Math.floor(pageHeight / 2);
   useEffect(() => {
     const options = {
-      rootMargin: `-${
-        window.innerHeight % 2 === 0 ? observerMargin - 1 : observerMargin
-        }px 0px -${observerMargin}px 0px`,
+      rootMargin: `${
+        -(window.innerHeight % 2 === 0 ? observerMargin - 1 : observerMargin)
+        }px 0px ${-observerMargin}px 0px`,
     };
     const intersectionCallback = (entries: any) => {
       entries.forEach((entry: any) => {
